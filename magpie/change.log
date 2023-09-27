@@ -1,0 +1,4162 @@
+commit 4a4143902e319a88870d3a7c41a9b6874d90bf35
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Feb 11 15:59:56 2016 -0600
+
+    Switched to using arrays rather than ArrayList for BaseEntry
+    
+    This should save on memory dramatically, but might have consequences on the speed of adding new attributes to the entries. I think the tradeoff is worth it, but this commit might be getting recalled.
+
+commit 4d7ff0b30308817931d3424c570a79c503bc77d8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Feb 1 08:17:50 2016 -0600
+
+    Added more tests to dataset
+    
+    Stopped at "split" commands (e.g., "split", "splitForThreading")
+
+commit 872fdad8170cc80eb00bcf64021313d961b314dc
+Merge: 357c53f 5f97b97
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 28 15:44:02 2016 -0600
+
+    Merge branch 'master' of ssh://bitbucket.org/WardLT/magpie
+
+commit 357c53fd5a424bcced76cf83c08746a94e279542
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 28 09:46:07 2016 -0600
+
+    Added more tests to Dataset
+
+commit aa916d3357153ca711346ef01fb887040902e35e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 28 09:02:43 2016 -0600
+
+    Deleted PropertyAsAttributeModifier (replaced by PropertyAsAttributeGenerator)
+
+commit 4d3e21e0e96d5bf7039042d24ae31aab4565dd90
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 28 09:01:13 2016 -0600
+
+    Added generator that uses measured properties as attributes
+
+commit 5f97b9741800311b170356c892915aa65039b0e8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 28 09:46:07 2016 -0600
+
+    Added more tests to Dataset
+
+commit 05a0da30bf6c0bb7e57585d2a33f684f61786121
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 28 09:02:43 2016 -0600
+
+    Deleted PropertyAsAttributeModifier (replaced by PropertyAsAttributeGenerator)
+
+commit 45d29477a1d57b634c61c349b5ed3ece108552d5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 28 09:01:13 2016 -0600
+
+    Added generator that uses measured properties as attributes
+
+commit deea0ed92016838ff28f034840b15039f8292311
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Wed Jan 27 20:11:11 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit d3ff952f880385b36c1a522c4b70a36e80354979
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jan 25 20:07:38 2016 -0600
+
+    Added class to normalize using regular solution model
+
+commit 0b33e027a1627ec4272511e6f20e647d151e0e73
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jan 25 20:07:28 2016 -0600
+
+    Added class to normalize using regular solution model
+
+commit f83fd1ea568b1d90eae19ad0c506ce325876c5c2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jan 22 09:11:59 2016 -0600
+
+    Added tests for GridBasedEntryGenerator
+
+commit 471ad0aeb4fcd9908115543c5637ce89f86c0bc2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jan 22 09:02:36 2016 -0600
+
+    Added tests for normalizers
+
+commit d5e90f015ec70c15afccad11bb705c07d6d462b9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 21 11:05:57 2016 -0600
+
+    Created getEntriesWriteAccess() to directly access internal list
+    
+    Changed behavior of many different operations to utilize this capability
+
+commit 88a551f6379bab071a93f33b2ad618ea97d1c39f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 21 10:55:18 2016 -0600
+
+    Created getEntriesWriteAccess() to directly access internal list
+
+commit 6c6b25928418c5d9d4994246ba4db7eaf01f3dca
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 21 09:15:04 2016 -0600
+
+    Created a set of standard tests for normalizers
+
+commit 3e71ef39ff9b8e2c27a0f75cc3903fd463ea250f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 21 08:53:41 2016 -0600
+
+    Renamed BaseDatasetNormalizerTest to a test that only runs the commands
+
+commit cf003416096ba21c17f8d63aac823125f8763c23
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 21 08:51:04 2016 -0600
+
+    Added ability to filter data before training model
+
+commit 9a17acf907d0c296170464e6adc784c2a415faf5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 21 08:37:09 2016 -0600
+
+    Change name of IsOutlierSplitter to PredictionOutlierFilter in regression models
+
+commit a731b89d549b0cb5df3af2d0f2a07ac74809f7ff
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 21 08:36:04 2016 -0600
+
+    Behavior Change: getEntries() returns new List object, not link to internal
+
+commit 20c12037367b82c32cf630726c84d12a8421c0bf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 21 08:35:02 2016 -0600
+
+    Bug fix: Mistake in clone() of RescalingNormalizer
+
+commit 6735e013e7e07f702f28c147795c72d6d3e0f5ff
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 19 17:40:19 2016 -0600
+
+    Added filter to remove outliers based on Z-score
+
+commit e52f63d37239dc625da4d5ad5b95c9edbee6eaae
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 19 17:40:15 2016 -0600
+
+    Added filter to remove outliers based on Z-score
+
+commit e5ab1e321ae1c0571df9317ca34e79182f8c467b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 19 16:04:59 2016 -0600
+
+    Renamed IsOutlierFilter to PredictionOutlierFilter
+
+commit 8fd80a6deb2bfe1f2bcfea07d0dfcc35b1c8ddc3
+Merge: 5c00386 d91a598
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 19 10:45:55 2016 -0600
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+    
+    Conflicts:
+    	src/test/java/magpie/models/ModelAdditionsTest.java
+
+commit 5c003868cdbef27759b66fd5b975c579dfaa228e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 19 10:42:31 2016 -0600
+
+    Bug Fix: Normalizer not cloned
+
+commit da290c9e3dea767a21e84b8f53f928f8e4aa428c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 19 10:22:26 2016 -0600
+
+    Added some extra tests to ElementFractionAttributeGenerator
+
+commit 18baa688f97469057ea3a407ced7b0592aeb1879
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 13 08:50:26 2016 -0600
+
+    Doc Fix: Fixed regex in autodoc tool, incompatible with Py 2.7.3
+
+commit f434285995a312cc71c7c6934cf9fb2e7476bba9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 13 08:24:46 2016 -0600
+
+    Doc fix: Made doc generator return non-zero exit values
+    
+    Also fixed documentation for AlloyingCompositionEntryGenerator
+
+commit 73ed6703d0d336a3ebcf2cbb134a85c65969ae1c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 12 17:13:53 2016 -0600
+
+    Doc Fix: Problem with "match" command for Dataset
+
+commit d91a5982f0dc9f204de74685917c8fbb0887a742
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 19 10:22:26 2016 -0600
+
+    Added some extra tests to ElementFractionAttributeGenerator
+
+commit 0cfd2405297565fdb2223030e79fa5c861387df1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 19 10:21:00 2016 -0600
+
+    Added tests for adding normalizers / selectors to models
+
+commit 5d74be7b0d7aa83ecfb1cde29e483635c15d9d2a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 19 10:21:00 2016 -0600
+
+    Added tests for adding normalizers / selectors to models
+
+commit 3549fe1dabb2436256729b6c9b6d6fd142abe8ff
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 13 08:50:26 2016 -0600
+
+    Doc Fix: Fixed regex in autodoc tool, incompatible with Py 2.7.3
+
+commit 4c7ac13c4917abc2f552fb04d5b6a286727c76f6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 13 08:24:46 2016 -0600
+
+    Doc fix: Made doc generator return non-zero exit values
+    
+    Also fixed documentation for AlloyingCompositionEntryGenerator
+
+commit f7312b64048d7665c456d0e6866124cfb6b121a8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 12 17:13:53 2016 -0600
+
+    Doc Fix: Problem with "match" command for Dataset
+
+commit 5ae9a49fca95ea7b83772f518911f01ccda55547
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 7 13:42:31 2016 -0600
+
+    Bug fixes for MultiPropertyEntry: Setting predicted properties
+
+commit 4118cdba2469e42b02671d6941b94bfeea2fc475
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 6 13:41:31 2016 -0600
+
+    Added function for deleted all measured classes
+
+commit 8691ad90130cbd0b3c1ed95ae2bdc8b22c15253e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Dec 31 15:05:38 2015 -0600
+
+     Check that dataset has same attributes as training set before running
+
+commit 31466ec3e845946971ad36a18a2550adf353acd4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Dec 28 18:33:34 2015 -0600
+
+    Added ability to generate alloy compositions within specified ranges
+
+commit a0d5f95c663e7d34965a609def6bf42741e1a77c
+Merge: b89d582 6b5e14f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Dec 28 15:53:58 2015 -0600
+
+    Merge branch 'master' of ssh://bitbucket.org/WardLT/magpie
+
+commit b89d582d6d1e4bd67066f7f8752d2a3fd8700699
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Dec 28 15:20:47 2015 -0600
+
+    Added tests for AllMetalsSplitter
+
+commit b0b2abc6c19d3e62e2907cabf33f4408a589415f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Dec 6 16:32:00 2015 -0600
+
+    Generate entries by adding in alloying elements
+
+commit 11b1b74bd483f07bea1a406bf4cd61db238f8381
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Dec 6 09:04:16 2015 -0600
+
+    Upgrades to composition parser
+
+commit 6b5e14f28c0088527557552deace377d6a787419
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Dec 6 09:04:16 2015 -0600
+
+    Upgrades to composition parser
+
+commit 1971aff486cd8fe9ae9e2334225880ef6fc4c2aa
+Merge: c014729 a62ccdd
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 25 12:15:43 2015 -0600
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+    
+    Conflicts:
+    	examples/simple-model.in
+
+commit c014729c2cf78001aef4e5b926063bf4bc594431
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 25 12:13:48 2015 -0600
+
+    Add citation printing to simple-model.in example
+
+commit a62ccdd3809d1c1d68dc55e6fdae655621694f2a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Nov 20 09:21:30 2015 -0600
+
+    Fixed tests for CommandHandler
+
+commit 3c8303fa65cfbc7aead061f2234e5db569347d6c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Nov 20 09:17:04 2015 -0600
+
+    Grammar fix for citation reasons
+
+commit cf0da761329f112c6562610262404f05e1ebe1ef
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Nov 20 09:12:56 2015 -0600
+
+    Renamed attributes.expansion to attributes.expanders
+    
+    Make package name consistent with the others
+
+commit 3d735f599434509f8f76d0e923425962e5842565
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Nov 20 09:02:38 2015 -0600
+
+    Add citation printing to simple model example
+
+commit 13723b7bcffa985e85a8377c9a1ac8cc7e341e8e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Nov 20 09:01:58 2015 -0600
+
+    Add citation for valence shell attributes
+
+commit f0da153e1dceb6aa9e560bbdf06628f677edf265
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Nov 20 08:55:18 2015 -0600
+
+    Add citation to Weka for all Weka-based classes
+
+commit 7081fb374c42f8cc061c99198246a0b613d03af8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 16 17:56:28 2015 -0600
+
+    Changed behavior of normalizer: Will not automatically train
+    
+    There is a train command. This just forces people to explicitly use it
+
+commit 1a7540b292b7f0f4e5ffaba95de14e8f0069f89b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 16 17:32:50 2015 -0600
+
+    Added command to find entries with most similar attributes
+
+commit 564aefd806166787bf727e719246a71deb8398c1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 16 09:45:23 2015 -0600
+
+    Added test for DiscreteToContinuousModifier
+
+commit 7b390fb8103a10353ace4001d601fd2f13091b8d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 9 11:01:24 2015 -0600
+
+    BaseModelTest now does numerical rather than string comparison
+
+commit 6c18ef4560e6d7e2a625100f2864bf3852f9be7d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 9 11:00:58 2015 -0600
+
+    Modified tests for MultiObjectiveRegression
+
+commit c82279319345fbfaed0bae022f57174aab8968aa
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 9 10:38:10 2015 -0600
+
+    Deleted ClassIsNegativeModifier
+    
+    Can do same thing with ClassIntervalModifier
+
+commit 4a2b5c4443bd55d15d8c8f0a6bea4b879404d962
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 9 10:37:38 2015 -0600
+
+    Added test for CompositionSetDistanceModifier
+
+commit 4e8b44aa202acec67dbd899b61e7546474a38e74
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 9 10:37:19 2015 -0600
+
+    Bug fix: Make sure to clear property data
+
+commit 7f3e0dae049bf9aba01e9f29dbbe675303389e7c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Nov 6 16:04:39 2015 -0600
+
+    Added tests for some dataset modifiers
+
+commit e4927afff2562826dc07082ff835f443c6bd0721
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Nov 5 11:19:50 2015 -0600
+
+    Modified behavior of Gradle's javadoc
+    
+    Want it to write to "./javadoc" to be consitant with the autodoc tool
+
+commit 61c920402afb49df4aaef54f7739283ccf3b5110
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 4 14:26:37 2015 -0600
+
+    Bug fix: Also fixed WekaAttributeSelector and WekaClusterer
+
+commit 83f8af342417bbe273ec3f94109bdf0f18b6641a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 4 14:20:47 2015 -0600
+
+    Bug fix: Problems with the forName operation from Weka
+    
+    I don't fully understand the error. Evidence
+    
+    1. Scripts involving Weka run fine from Netbeans
+    2. Tests run fine on Netbeans and via Gradle
+    3. Build via Gradle works fine (Gradle makes a single jar with all of the dependancies inside)
+    4. Build with Ant doesn't work I get a "Can't find class" error from Weka when creating a model
+    
+    Ant is the only of these options (I think) that involves putting class path in the jar manifest. Perhaps this error therefore has something to do with adding external jars to the classpath via the manifest. But, I don't understand the class loader enough to figure out why that's important.
+    
+    This did work fine with Weka 3.7.9. Maybe there was a change between 9 - 13 in the Weka class loader.
+
+commit 4ce90936a65651f707373c18c5c7078e6a5cfef1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 4 11:19:42 2015 -0600
+
+    Updated weka to 3.7.13
+    
+    Includes more algorithms and ability to interface with Python / R / Groovy
+    models
+
+commit 9ecbaa1034bfa8ddf1f6f8bc07933effb7e32180
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 4 11:00:11 2015 -0600
+
+    Added "citations" command to text interface
+    
+    Commit also includes implementations for a few classes and new tests
+
+commit 8eb5960cc4aa5a643aa77ea6cbc1983ee7d287b9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 4 10:56:22 2015 -0600
+
+    Added citations for some classes
+
+commit a71f9c20e83e1f7a1cf98571dc6c52bc827e8143
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 4 08:43:10 2015 -0600
+
+    Added a interface for citable objects
+
+commit 9538755f6960e145e3348cc774cc6fb3402afbf8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Nov 3 11:00:59 2015 -0600
+
+    Various improvements to ScikitLearnRegression
+
+commit 13a80136a4c4913bfcb45cfaedda478d04151441
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 29 16:36:21 2015 -0500
+
+    Added more filter testes
+
+commit 4db49821dacf75884ed22ac0b0d985d1f8029e39
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 29 16:33:22 2015 -0500
+
+    Removed legacy class
+
+commit b58b0b48f6166769735cf711c4a3275b60019c9b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 29 13:56:40 2015 -0500
+
+    Added more lookup tables
+
+commit 59350f1126bdd8c22548b2939dad3e864306dd46
+Merge: 927506b f751d5d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 29 13:28:48 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/WardLT/magpie
+
+commit 927506bcec44374bbbcc725cdf59bf8a2ce5ea74
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 29 09:53:29 2015 -0500
+
+    Added tests for filters
+
+commit 46e193878e0aad746c357b3336258339338bb002
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 28 10:20:13 2015 -0500
+
+    Doc fix: Unit for density is g/L not g/cm^3
+
+commit 7766bcadffc5def361cfb00804ed8667939cc744
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 21 17:02:03 2015 -0500
+
+    Print to screen when thread has error
+    
+    Dev Note: Should also stop execution (TBD)
+
+commit 4b34351fbcb9d43cc457dfe1a48abd1ce42323b8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 21 17:00:51 2015 -0500
+
+    Bug fix: Bad check in MultiPropertyEntry
+
+commit f751d5d568545333c968d6b455caa172836e6643
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 29 09:53:29 2015 -0500
+
+    Added tests for filters
+
+commit 355dfb99140e35a4dcabcce94948c00633f91f0b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 28 10:20:13 2015 -0500
+
+    Doc fix: Unit for density is g/L not g/cm^3
+
+commit 948f299f9951f5d337dd1f71791e8147c50d7609
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 27 15:05:02 2015 -0500
+
+    Bug fix: NaN when computing dH of element if element not in training set
+
+commit d21d1ea10ba96a1fa927a9385a95f1143723746b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 21 17:02:03 2015 -0500
+
+    Print to screen when thread has error
+    
+    Dev Note: Should also stop execution (TBD)
+
+commit b343ddba1dee47391746f96a643b4f9d10fbf9ce
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 21 17:00:51 2015 -0500
+
+    Bug fix: Bad check in MultiPropertyEntry
+
+commit 057b9cc5ef640dbc7ba8d9dcfe9e040b471ee016
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 21 13:24:21 2015 -0500
+
+    Bug fix: Can't run "add" without -force option
+
+commit 2c7ec1cdab3741f8f4a47597049ed6b9ea227f29
+Merge: 694c66c 8c55956
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 21 11:33:48 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/WardLT/magpie
+
+commit 694c66cc12931ae1e632b5f30949d937e2160744
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 21 11:30:23 2015 -0500
+
+    Added ability to add entries from a dataset to another dataset
+
+commit 931ae13eca17539d7be6f506ecca7faaeac64d37
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 20 11:28:06 2015 -0500
+
+    Bug fix: Parallelization fails with models that have attribute selectors
+
+commit fb64a5d362788d9345fe750c75cdd28ed9c4eda1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 20 10:57:39 2015 -0500
+
+    Updated split-model test to show comparison in 10-fold CV
+
+commit 8c5595685a647325f7e32eecaf2eb203a807f638
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 21 11:30:23 2015 -0500
+
+    Added ability to add entries from a dataset to another dataset
+
+commit 8e6229fbb68247f838511ba88013dbce90a9e24e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 20 20:05:52 2015 -0500
+
+    Doc fix: Add Dataset combine, fixed validator command
+
+commit fe5b82bc88211366cf7c113128c20e5494e2d10a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 20 17:16:24 2015 -0500
+
+    Doc fix: Problem with BaseDatasetSplitter
+
+commit 889832f19ef944597493528424580a4ba3aafc2b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 20 11:28:06 2015 -0500
+
+    Bug fix: Parallelization fails with models that have attribute selectors
+
+commit e9d7c2beec6544681d7aa31e906dbf8cdbdae807
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 20 10:57:39 2015 -0500
+
+    Updated split-model test to show comparison in 10-fold CV
+
+commit f3227076558dbc0b5e56d7436ccf92ad23b9a732
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 20 10:14:10 2015 -0500
+
+    Major Bug fix: Don't retrain partitioner when running SplitModel
+
+commit cd7f90969b1e1acb1d94ae339a6346e607f3c325
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 20 09:31:14 2015 -0500
+
+    Added synchronization wrapper around elemental property data table
+
+commit 0dc29907c294daa4168259b14e04c79b54f07b54
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Oct 19 10:46:46 2015 -0500
+
+    Made ModelPredictionAttributeGenerator thread-safe
+
+commit 72c261ee3a0af175ac40697bd01da2be2f28b123
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Oct 19 09:27:23 2015 -0500
+
+    Ensure class is within bounds when converting to Weka format
+
+commit 478e6638882a9c459566b1223eddb6d27706013e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Oct 17 16:34:14 2015 -0500
+
+    Delete measured class before running model for attribute generation
+
+commit df510927d4d1a8ea6694e6d59a63a8af2379e384
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Oct 17 16:32:51 2015 -0500
+
+    Added ability to delete measured class
+
+commit 34e5be83b3a1187a31af608fb79eff6bb1e92881
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Oct 17 16:25:06 2015 -0500
+
+    Deleted unused "convertToWeka" functions
+
+commit 91f5bef6c48f5ade54efe808013bc9785ba9c90f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Oct 12 19:00:46 2015 -0500
+
+    Added ability to train dataset splitters from command line
+
+commit 64724c2679e2718bd1469f8328d70b75fb6cf73c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Oct 7 13:58:27 2015 -0500
+
+    Added test to make sure training and running a model do not change attributes
+
+commit 9ccd72ddf32cc62a8d74f49fc1987d55d962888e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 6 09:14:32 2015 -0500
+
+    Added tests for PolynomialFitEvaluator
+
+commit fc4a7a9283a930801ebaa4c7d976f4438ad9d1d2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 6 09:06:11 2015 -0500
+
+    Added tests for PearsonsCorrelationAttributeEvaluator
+
+commit ff954651f2693d652b5e4acbe2b872e8865bdd79
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 6 08:56:33 2015 -0500
+
+    Added tests for PearsonsCorrelationAttributeEvaluator
+
+commit a39f175a0d232d3c1215e23fb84c17a15024521d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 6 08:45:27 2015 -0500
+
+    Removed PerceptronRegression - Less featured than WekaRegression + functions.MultilayerPerceptron
+    
+    You actually can have greater control over the NN using the WekaRegression interface. Removed to encourage users to use that for the time being
+    
+    Eventually, I want to employ a tool such as Theano to run Deep NNs. For that, I'll likely use a similar approach to ScikitLearnRegression, where you supply an input file to Magpie and the model is run in separate thread.
+
+commit e0601d97b24729b0379d9350c4ba88107cfbd7f0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Oct 5 11:53:10 2015 -0500
+
+    Added lookup tables for estimated FCC/BCC lattice parameters
+
+commit 3d675c28b9d6b22e15a9510f0573030b7494378a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 15:54:08 2015 -0500
+
+    Exclude autogenerated files from coverage analysis
+
+commit e04b7fb036e5f4a8229c12be332fba504a270ad7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 15:49:18 2015 -0500
+
+    Created special directory for autogen Thrift files
+
+commit a0722c4897ad8976e9b1ebcdcdee5575dac11797
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 15:33:36 2015 -0500
+
+    Turned off debug mode for PerceptronRegression, reduced number of layers in testing
+
+commit fb65827d1b008467085c2507e1f16c6e549df2ae
+Merge: 8d16efb 1f4f95b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 15:08:07 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+
+commit 8d16efb85df4fded55c4eb792742adea78c1d032
+Merge: 65ce19a a377fe9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 15:02:30 2015 -0500
+
+    Merge origin/master
+    
+    Conflicts:
+    	src/magpie/models/BaseModel.java
+    	src/magpie/models/SplitModel.java
+    	src/magpie/models/regression/CompositeRegression.java
+    	src/magpie/models/regression/LinearCorrectedRegression.java
+    	src/magpie/models/regression/StagedRegression.java
+    	tests/magpie/models/BaseModelTest.java
+
+commit 65ce19ab5c2b647adfcbf1671df3b5d1eab41392
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 14:55:54 2015 -0500
+
+    Added test for ClassFilter
+
+commit 1f4f95bb39a50760668d45437743889b61088057
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Sun Oct 4 19:28:51 2015 +0000
+
+    README.md edited online with Bitbucket
+
+commit b391546ff1cdcdc4ad84b868d9eeb826d5666442
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 14:10:52 2015 -0500
+
+    Implemented CumulantExpansionClassifierTest
+
+commit 581e11fbca7b1ca5e2aee00c091933f8205538a5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 13:42:09 2015 -0500
+
+    Fixed bugs in ServerLauncher and MagpieServerHandler
+
+commit 251d7bd7e6b2e9e68c3b674853ffe433a8e178fa
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 12:56:28 2015 -0500
+
+    Modified Ant script to account for new src directory
+
+commit a618a03c17b763de33886d3a9d48a746fd04068a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 12:55:03 2015 -0500
+
+    Modified README to tell how to build with Gradle
+
+commit efa971bd0369dd0bb46ddaeac3b5a13c1c36f968
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 12:50:12 2015 -0500
+
+    Added timeout to ServerTest
+
+commit 0abc4d47054bf62827c25c6a509b050b2b8a719d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Oct 4 12:49:33 2015 -0500
+
+    Added jar creation to build.gradle
+
+commit c073f0da9cefb24bd44621a89da4d5cdbe69e1cf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Oct 2 14:25:07 2015 -0500
+
+    Added Gradle build script and wrapper
+
+commit f478310a80f46d4e96d905a244c55839b7dd36da
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Oct 2 14:23:13 2015 -0500
+
+    Modified project structure to fit Gradle convention
+
+commit 24b5775e3d4eaf58c875712fa4582f5ab60a6df9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 1 10:47:34 2015 -0500
+
+    Fixed training/running bug in StagedRegression
+
+commit b908f113bb713a433c90840f81a9b187bd3d61b8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 1 10:47:03 2015 -0500
+
+    Fixed training/running bug in LinearCorrectedRegression
+
+commit 5f32ae8cac8a2f57d83a0e5e5019209416b906b3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 1 10:46:43 2015 -0500
+
+    Added test to make sure that training a model never runs models
+
+commit 066c6cd29f8bf6ab4bac01836b261645be73defe
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Thu Sep 24 20:55:46 2015 +0000
+
+    Minor changes/updates to lookup data description
+
+commit a377fe90d22503ea3ce426701d573ddfdf710061
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 1 10:47:34 2015 -0500
+
+    Fixed training/running bug in StagedRegression
+
+commit 97e702fc96be130d9cf257d4cf2ab1310877181e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 1 10:47:03 2015 -0500
+
+    Fixed training/running bug in LinearCorrectedRegression
+
+commit 0ffbf345daa40486e59d3e3c0bc1bf061661cdc1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 1 10:46:43 2015 -0500
+
+    Added test to make sure that training a model never runs models
+
+commit c848b883f2b151ad7a0a390df5fa7fd82c3a786d
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Thu Sep 24 20:57:41 2015 +0000
+
+    Cleared up description to Lookup Data README
+
+commit d22dd8cf36303ca8c4d4bef0ccdd19612b5b135e
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Thu Sep 24 20:55:46 2015 +0000
+
+    Minor changes/updates to lookup data description
+
+commit 046d8724b9b1ea84dec48350b44a1dfa9cf51c08
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 30 15:36:10 2015 -0500
+
+    Major Bug Fix: Problem for training MultiModel classes - READ DESCRIPTION
+    
+    Was overwriting results from previous folds when running cross-validation, leading to incorrect statistics when computing the performance statistics.
+    
+    Occurred because split models were computing training statistics for the sub models, which overwrites the predicted class variable for each entry. So, for folds 1-(k-1) during cross-validation, the predicted class variable from when that fold was used as the test fold was overwritten when those folds were used as the training set for the last fold. So, the CV results contained the average of the training errors for folds 1-(k-1) and the validation results for k fold.
+
+commit 933921f4b5e44e5cecf3d1944ae62a75765a4952
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 30 15:35:54 2015 -0500
+
+    Major Bug Fix: Problem for training MultiModel classes - READ DESCRIPTION
+    
+    Was overwriting results from previous folds when running cross-validation, leading to incorrect statistics when computing the performance statistics.
+    
+    Occurred because split models were computing training statistics for the sub models, which overwrites the predicted class variable for each entry. So, for folds 1-(k-1) during cross-validation, the predicted class variable from when that fold was used as the test fold was overwritten when those folds were used as the training set for the last fold. So, the CV results contained the average of the training errors for folds 1-(k-1) and the validation results for k fold.
+
+commit 751f8a37c93b7045cf0aef130ebaf638add83913
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 30 15:36:10 2015 -0500
+
+    Major Bug Fix: Problem for training MultiModel classes - READ DESCRIPTION
+    
+    Was overwriting results from previous folds when running cross-validation, leading to incorrect statistics when computing the performance statistics.
+    
+    Occurred because split models were computing training statistics for the sub models, which overwrites the predicted class variable for each entry. So, for folds 1-(k-1) during cross-validation, the predicted class variable from when that fold was used as the test fold was overwritten when those folds were used as the training set for the last fold. So, the CV results contained the average of the training errors for folds 1-(k-1) and the validation results for k fold.
+
+commit 3447ace36f63d816c5cd99b4d04ae4f9743c683f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 30 15:35:54 2015 -0500
+
+    Major Bug Fix: Problem for training MultiModel classes - READ DESCRIPTION
+    
+    Was overwriting results from previous folds when running cross-validation, leading to incorrect statistics when computing the performance statistics.
+    
+    Occurred because split models were computing training statistics for the sub models, which overwrites the predicted class variable for each entry. So, for folds 1-(k-1) during cross-validation, the predicted class variable from when that fold was used as the test fold was overwritten when those folds were used as the training set for the last fold. So, the CV results contained the average of the training errors for folds 1-(k-1) and the validation results for k fold.
+
+commit 79779a7730a6bbf031ac4c21cda1d24e6cb20573
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Thu Sep 24 20:57:41 2015 +0000
+
+    Cleared up description to Lookup Data README
+
+commit c1a38f1a0f4af8be30fcee3dd4bc9bd82c0ca0ef
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Thu Sep 24 20:55:46 2015 +0000
+
+    Minor changes/updates to lookup data description
+
+commit 22ae3770bb852f498a5dfedbaebbd5f9394d9152
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 23 15:18:15 2015 -0500
+
+    Clear attributes after test for PhaseDiagramExclusionValidator
+    
+    No longer necessary to store.
+
+commit 74e7ae361e0376efe019dbe32c3e89ac8bdd6188
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 23 15:14:42 2015 -0500
+
+    Added ability to clear attribute data from a Dataset object
+    
+    Useful for conserving memory
+
+commit d89f5a78f2dcecb52743322e1dbbfbb24fdf8f35
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 23 11:48:22 2015 -0500
+
+    Made it possible to print results from validation test to screen easily
+
+commit 4b920ec6b90a241b83ff6049f5204646174caa37
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 23 11:25:24 2015 -0500
+
+    Added tool for evaluating performance of model by iteratively excluding phase diagrams
+
+commit 86e8b022bb31c92197d4a992ddcd7a996e6c0c28
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 22 10:59:23 2015 -0500
+
+    Check if more than 2 examples before computing correlation coeffs
+    
+    Conflicts:
+    	src/magpie/analytics/RegressionStatistics.java
+
+commit f69c1d02b5c72f835649fc5da3571ddf595f3c3c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Sep 22 11:43:47 2015 -0500
+
+    Modified behavior of PhaseDiagramExclusionFilter
+    
+    Now filters out entries that contain all of the elements in the phase diagram being considered
+
+commit 957aa604e2e292a2cd08e7de196bd5b2802aec59
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Sep 22 11:36:20 2015 -0500
+
+    Renamed ContainsOnlyElementsFilter
+
+commit fc6be2aa0cbccc262d5f3538d5c6dbf089c92547
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Sep 18 15:33:56 2015 -0500
+
+    Added table defining and giving source of all elemental property data
+
+commit b539eeb880a767b5be3c55b65dc8585fd9561975
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Sep 18 09:47:33 2015 -0500
+
+    Added assessed radii of elements in metallic glasses from Miracle et al., 2010
+
+commit 48b4e3c5f5d2e3cc8d90726fe2a3a17247838595
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Sep 18 09:26:21 2015 -0500
+
+    Deleted BCC elemental data. No longer useful, only confusing
+
+commit 86f282565958e0f4e0087fb22fe75cc76b76dabf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Sep 17 08:34:42 2015 -0500
+
+    Ensure no elements in CompositionEntry have zero or negative amounts
+
+commit 49d1a475b704fb4dbb0f318f6ac2b6a7878391df
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Sep 15 11:32:48 2015 -0500
+
+    Added generator for using the result of a model to create attributes
+
+commit 74a00edf2569ffb3defd5ce3ed76985113147ca4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Sep 14 17:04:25 2015 -0500
+
+    Output model performance for each entry from crossvalidation
+
+commit 00c9eb40d38e5ddbaaaa714ad10d244d775aa177
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Fri Aug 28 18:34:44 2015 +0000
+
+    README.md edited online with Bitbucket
+
+commit 5df9680398065ff94ee240fd17c27f6e1e365803
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 28 11:29:52 2015 -0500
+
+    Doc fix: "expander" should actually be "expanders"
+
+commit a19a4fb769e2ef829a381fac1a2b4a26803ec2e2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 28 11:29:33 2015 -0500
+
+    Print reason for variable failing to load
+
+commit 833e12822db5b107f771c8e6f4c65c596e6add07
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 28 11:18:53 2015 -0500
+
+    Maded ParsedFunction serializable
+
+commit bb23a205c5ecd232aef1141b08689f438926d88e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 28 10:54:08 2015 -0500
+
+    Bug fix: Not properly rendering names for FunctionExpander
+
+commit 2807d158af0bab41babd211f929989c9adbf9246
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 28 10:46:08 2015 -0500
+
+    Bug fix: Use #'s instead of $'s for parsed function
+    
+    Otherwise, it interferes with the variable parser for Magpie.
+
+commit 8b47b797f472d148361f15f18688bc6d4e8edd72
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 28 10:39:37 2015 -0500
+
+    Bug fix: Error when reading prototype site information
+
+commit 4cc8a449cba89635c15c190fb02806b3e319dc2d
+Merge: ab4da33 276109c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Aug 24 15:26:10 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/WardLT/magpie
+    
+    Conflicts:
+    	src/magpie/attributes/generators/composition/ElementalPropertyAttributeGenerator.java
+
+commit ab4da33106f9d17a67293114db90ed4d2f93d999
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Aug 24 14:15:06 2015 -0500
+
+    Cleaned up output for missing elemental properties
+
+commit 276109cc3089d55388e10747c39aab2a34896519
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Aug 24 14:15:06 2015 -0500
+
+    Cleaned up output for missing elemental properties
+
+commit abfecb64976df9051cdceaeedc4bea33b1a0b604
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 21 10:33:34 2015 -0500
+
+    Bug fix: Handle non-ASCII characters when importing
+
+commit 1bd1639c2357e5a00f5fd208eb77424c779ee2be
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 19 16:21:18 2015 -0500
+
+    Spelling fix: StabilityCalcualtionModifier
+
+commit b2bfe72d8d587183cabd0c6ec0e0cdf7d79eb945
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 19 14:00:14 2015 -0500
+
+    Moved setModel to outside try/catch block for Weka models
+    
+    Now prints the error from Weka when a model instantiation fails
+
+commit df5a0ac22d9f35e35f0ed7fc5304e7bbcb672078
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 14 15:49:52 2015 -0500
+
+    Bug fix: Ensure order of entries does not change in SplitModel
+    
+    Wreaks havoc for models with attribute selections
+
+commit de2b5bc577973519a77a453559ff6d8c37399d95
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 14 13:39:55 2015 -0500
+
+    Made GCLPCalculator serializable
+
+commit af69c1834ec01aa91575d6cf12332215e0e2d882
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 14 13:02:00 2015 -0500
+
+    Added ability to write contingency table to output
+
+commit f44eca08a269b2589b65c49e84f086dfa534ca59
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Aug 13 10:10:42 2015 -0500
+
+    Added another test to CompositionEntry
+    
+    Make sure it can parse complex alloy compositions
+
+commit da19380ffa6b3fc97291f5cd5165acf346ba6f06
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 12 10:12:28 2015 -0500
+
+    Added more tests to StabilityFilter
+
+commit 4e9db16735908e3790dc7b6a3a3eaeab73dfb5aa
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 12 10:06:11 2015 -0500
+
+    Updated path to simple_data in tests
+
+commit fae6a2f5d1ac34c7626518652efe011bbc0b56ae
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 12 10:03:08 2015 -0500
+
+    Updated tests and documentation to reflect new distance metric
+
+commit 26b9ef43f2d29d8d44fa1f04a2658e0c07d9d66d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Aug 11 21:33:13 2015 -0500
+
+    Added more tests for BestInAlloySystemFilter
+
+commit 2a7babf8db6571502390e8652d0a317e336e0d3d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 12 09:07:34 2015 -0500
+
+    Bug fix: Add properties and set target property during addEntries
+
+commit 00730271ea8d9249b6408c509815b742c670cf37
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 12 08:51:36 2015 -0500
+
+    Doc fix: Corrected usage statement for AdaptiveScalarizingEntryRanker
+
+commit ad4bde86d8457a9bd8958c8e1c68470d7b0a1e85
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 12 08:47:49 2015 -0500
+
+    Print out split names when displaying SplitModel
+
+commit b0025ea956f9916d9903df385f7f7e2e21a61f6b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 12 08:47:24 2015 -0500
+
+    Bug Fix: Train objective function before filtering
+
+commit 34d00aa96869f867430151609cf6e93b32dcc542
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 12 08:21:11 2015 -0500
+
+    Bug fix: Train filter before filtering in BatchModelEvaluator
+
+commit 06f6c31e5d2a7883006208a2d98ffbec60f4dcd5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 7 13:35:48 2015 -0500
+
+    Added tool to only select only the best entries in each alloy system
+
+commit d98eb95ff9a52cafbc861d5b5b55a2f62a29190e
+Merge: dd9f53f 8ffd9bd
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Aug 6 16:50:09 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+
+commit dd9f53fd2d48670c4801e0ea85952e9eb85dbfe4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Aug 6 16:47:19 2015 -0500
+
+    Added more tests to GCLPCalculator
+
+commit 902a985b714fc3f84cf097f3a0963866a6615d76
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Aug 6 16:45:30 2015 -0500
+
+    Adjusted attribute evaluators to have a more-general ranking scheme
+    
+    This made it possible to not rank entries by the absolute value of the correlation coefficient and still output whether the correlation is positive or negative
+
+commit 0a52033b16f848d262375285ee3b012e78a73c4a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Aug 6 16:43:09 2015 -0500
+
+    Made sortAndGetRanks more general
+
+commit 8ffd9bde4646154e57f5df67b0b01e2474613e7a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Aug 6 11:43:00 2015 -0500
+
+    Bug fix: Add newline after header if no class variable
+
+commit 786d810d1d537afc6cc9693fef7d307665d8d4a5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Aug 4 16:06:24 2015 -0500
+
+    New Dataset command: Add entries by string
+
+commit 36255d573edb69fc19ba5db6af31086569005298
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Aug 4 14:58:51 2015 -0500
+
+    Added filter based on computed stability
+
+commit f23a9dc934980ddf9834aaec713ac42cbd8cb26b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Aug 4 13:36:01 2015 -0500
+
+    Return result direction from GCLP operation rather than storing it
+    
+    Easier to parallelize
+
+commit bb14321c5960ac628e8de02f9fa46648498c06b6
+Merge: a18ad7e e7a0b72
+Author: = <=>
+Date:   Sat Aug 1 13:22:07 2015 -0500
+
+    Merge origin/master
+    
+    Conflicts:
+    	src/magpie/utility/tools/BatchModelEvaluator.java
+
+commit a18ad7e175c0390a683ebb8c4ac3757a79b52099
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Aug 1 13:15:16 2015 -0500
+
+    Added ability to generate attributes, run models, and filter out desired candidates iteratively
+    
+    Also does it all in parallel
+
+commit e7a0b728cd6bd8c89dc6e9568c6029fdb71a3ad4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Aug 1 12:47:22 2015 -0500
+
+    Added ability to generate attributes, run models, and filter out desired candidates iteratively
+    
+    Also does it all in parallel
+
+commit c32308114a23128a69b529d9bfa24212d4633c8a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 31 17:27:12 2015 -0500
+
+    Modified entry generators to provide an iterator and not a list
+    
+    Can save on memory if list is too large to be stored in memory at once
+
+commit d45c4a1b3978f42d7a9e3e4bde4fc96115379ea0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 31 16:11:50 2015 -0500
+
+    Added utility for iterating over n-dim arrays
+
+commit e0347a4b585edf75c7db14f7b4705d364ec8465c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 31 10:11:30 2015 -0500
+
+    Implemented parallel labeling for BaseDatasetFilter
+
+commit 4a473b2ad51d38ba457a97bdc7f339e3dfcecdb3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 31 08:30:54 2015 -0500
+
+    Parallel implementation of attribute generation
+
+commit 8f77a483bb796e2958c1dc7d6b353faa05b043f7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 31 08:04:55 2015 -0500
+
+    Parallel implementation of running models
+
+commit 08a267a51d73fdc1a4fc30af81a586b5a1d749b3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 20:20:48 2015 -0500
+
+    Performance: Do not call iter.remove() for Entry list
+    
+    This scales with O(n), which is awful for large datasets
+
+commit cd8e14f8e6c7f1cdab9b4223b24e248089745e34
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 16:01:55 2015 -0500
+
+    Bug fix: Handle extra whitespace between words in input
+
+commit 63a807d15b461bcd37ba09d54785aca4e422aafb
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 15:58:33 2015 -0500
+
+    Bug fix: Handle spaces at the beginning of a line
+
+commit 8cceeb60d01486cfc4d8b5dc61d4652b960efd17
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 14:31:45 2015 -0500
+
+    Added explanation for how splitForThreading works
+
+commit 6a58a3f4b52f3aa8cf6900977f1fe907e8b5abf6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 14:30:42 2015 -0500
+
+    Added explanation for how threading splitter works
+
+commit ca0d73c6e5a24cdb504e5d6501bc3e082cc5f490
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 14:29:40 2015 -0500
+
+    Parallel implementation of CompositionSetDistanceModifier
+
+commit 10fb80ecc0ced9b7d9e839868ec8d3873ae81b2b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 14:28:44 2015 -0500
+
+    Started parallel support for Magpie. User can specify number of threads with "-n" flag
+
+commit c587fd9e31a4f6bf4d2170ee18cd5d730478682f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 14:07:32 2015 -0500
+
+    Simplified dataset splitting for threading operations
+
+commit 31dcb7cc9ed817078dcdd4af571ca2b649069bee
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 23 11:29:13 2015 -0500
+
+    Do not remove entries from Dataset when splitting for threading
+    
+    We'd just have to add them back in later, which would take more time. Plus, deletions in ArrayLists are costly.
+
+commit 6c06fb159b5c61f7ff1584907ac5126411593cdf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 10:02:29 2015 -0500
+
+    Added modifier to compute composition distance and store it as a property
+
+commit e9fb65475b4e184276bc203a77e1ca80fb8cf323
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 09:56:39 2015 -0500
+
+    Renamed CompositionSetDifferenceFilter to CompositionSetDistanceFilter
+    
+    Be more consistant with the similar classes
+
+commit 4bbaef3f7717e0ce20ac5c1e7daf4df97a85247c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 30 09:50:49 2015 -0500
+
+    Fixed documentation for HHICalculationModifier
+
+commit 76097b4fead59fb9cd026c04e37dd8991ae942e2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 29 09:44:13 2015 -0500
+
+    Upgraded composition parser
+
+commit 68ce9c434d048067df0e0d478223b11115634650
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 29 09:43:54 2015 -0500
+
+    Added tests for composition parser for CompositionEntry
+
+commit 2d381c98331e15d15fabcbe296c5e6c2930d120f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 29 09:16:40 2015 -0500
+
+    Bug fix: Null exception when reading model info
+
+commit 8cfcdaee71fabb39d892b14687aa1bac6243d655
+Merge: 686739c 8df3b6b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 29 09:15:49 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+
+commit 686739ce417416b4d83748d4adcf50d111de352e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 29 09:14:47 2015 -0500
+
+    Doc fix: Wrong number of attributes for MeredigAttributeGenerator
+
+commit 8df3b6badcc820d703791e7f3ce8e3a626d3ad4f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 28 09:54:36 2015 -0500
+
+    Implemented options handler
+
+commit 6026d0ec46128511f1b34733e5b2d89779c597ca
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 28 09:49:56 2015 -0500
+
+    Performance enhancement: Stop search when compound closer than threshold is found
+
+commit d99e76e238478194e2a79114e0830016a1b41065
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 28 09:42:12 2015 -0500
+
+    Added filter based on predicted class probabilities
+
+commit 3123eb9a1f54e08a8dae7358c64649a997820e69
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 27 16:34:22 2015 -0500
+
+    Implemented ranking based on distance from compositions in a dataset
+
+commit 72e3b920d4556e4fed752171ba02e282e0f93610
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 27 16:34:01 2015 -0500
+
+    Implemented options for CompositionSetDifferenceFilter
+
+commit 8ada87f9196dc31abe5feb633cd0be13739ce327
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 27 09:55:23 2015 -0500
+
+    Added filter to remove entries based on distance from all compositions in a dataset
+
+commit e34e004b4a1cdb3761334f2e7509ea0242d6ccbd
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 26 21:37:32 2015 -0500
+
+    Doc fix: MeredigAttributeGenerator description
+
+commit 84298e1e2e6cfcd699a399f81d39344cf61759e1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 26 21:30:41 2015 -0500
+
+    Bug fix: Server launcher
+
+commit fddc3a97103adaddf406fd77bfeb409cc9445455
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 26 21:02:17 2015 -0500
+
+    Skip models that fail to load when starting server
+
+commit f35dfed1c7967de35f6ba5f8107d02a0f4b5188c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 26 19:03:23 2015 -0500
+
+    Improved setOptions and printUsage of MetallurgicalHeuristicRegression
+
+commit edbd3a0e7f3684a591569b0be9bd50aed67ec834
+Merge: 0c9a0e3 fc82929
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 26 18:36:13 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+
+commit fc829292e4813b5f755fef557e743f3b766099f6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 26 18:35:43 2015 -0500
+
+    Added fitting correction factors to MHR model
+
+commit 6f637e21b2196cfd5a2282f14afe8c10e64fe7c0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 26 18:11:29 2015 -0500
+
+    Added more tests for MetallurgicalHeuristicRegression
+
+commit 0c9a0e347b736f1327f16f22821cb09d14529885
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jul 25 16:13:56 2015 -0500
+
+    Made MetallurgicalHeuristicRegression serializable
+
+commit a9a0f439701c58777b63264445dc0ba20d5d0c2a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jul 25 15:58:05 2015 -0500
+
+    Fixed "combine" for MultiPropertyDatasets
+
+commit cf7f4948073a0866d77a9abee8a4e6c679d47470
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jul 25 09:55:30 2015 -0500
+
+    Fixed docuementation for MeredigAttributeGenerator
+
+commit e45508037c496eca3909265c30c1077ba52b022e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jul 25 09:20:17 2015 -0500
+
+    Added tests for MetallurgicalHeuristicRegression
+
+commit ba0e64f4b48ff4f5d0801fb51e0daa45da21ca5b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 21:04:55 2015 -0500
+
+    Added attribute generator for Meredig & Agrawal et al PRB (2014)
+
+commit ed090d7a1187a04ce002a0c9c10eb92eff58aa61
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 15:35:05 2015 -0500
+
+    Made a separate attribute generator for element fractions
+
+commit ae0e3f65f4d5cc8a29c76c4edc79fc199ba79a19
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 13:57:26 2015 -0500
+
+    Doc Fix: Made imporvements suggested by Kareem Youssef
+
+commit 21a23e887b12a897584b5b535401fc2ae076f416
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 11:02:58 2015 -0500
+
+    Revised CRM example to use zirconia dataset
+
+commit 0ada5992bf8e6207fa50039e2f3226f05dd62f7c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 10:57:47 2015 -0500
+
+    Added dilute solution energy dataset from http://pubs.acs.org/doi/abs/10.1021/cm403727z
+
+commit ecd7579f1df20a93ae3d8f1191f922a995c39852
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 10:56:14 2015 -0500
+
+    Renamed simple-data.csv to simple-data.txt
+
+commit bc2e476dd2f2da7984ea8bff5dd9d5dea121c1bf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 10:48:26 2015 -0500
+
+    Added a dataset for building models based on elements
+
+commit 436e6f47232907b5cd961ce9cf8b94083fff16be
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 10:46:14 2015 -0500
+
+    Moved loading in lookup tables to LookupTable class
+
+commit 0d52bb2df6e6e19a9e1a0579bab2337ede8e55cd
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 09:28:35 2015 -0500
+
+    Moved operations for reading data file header and entry properties to MultiPropertyDataset
+
+commit 3203c343eff7056a39cd118ab120d92f31adb753
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 24 09:26:38 2015 -0500
+
+    Added test for importing composition data
+
+commit 0e62f840ce86abbb63cc8e6f3cc56e4125f5bea0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 22 13:41:40 2015 -0500
+
+    Put training time back in model info page
+    
+    Some commits overwrote each other
+
+commit aec025684770bbd55ca5657f99caebd001c9e41d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 22 10:02:37 2015 -0500
+
+    Fixed typos in model webpage
+
+commit 633dd6e1d6ab4f5913788df58c8425185e98c943
+Merge: ccc3a17 ff704aa
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 22 10:02:19 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+
+commit ff704aa16219fc95c37050073e8546e1d8158e31
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 21 10:21:52 2015 -0500
+
+    Added training time to model information page
+
+commit ccc3a171414a70dede1ec3d8d910c98237a1f7b3
+Merge: 2ce8f52 7409ce4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 21 10:22:23 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/WardLT/magpie
+
+commit 2ce8f52e47a3e4e78d399c02c93010ceb7239e6a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 21 10:21:52 2015 -0500
+
+    Added training time to model information page
+
+commit d32d0500d3dc05d05ed6f4ee0f2333846be62c5f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 17 16:00:53 2015 -0500
+
+    Send model training time through Thrift interface
+
+commit 3130d618ceb924ca449db5ea06f2c01b199492b9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 17 16:00:53 2015 -0500
+
+    Send model training time through Thrift interface
+
+commit 750fdd8b68e171a2735fb914353781b5e4cbd4da
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 17 15:44:30 2015 -0500
+
+    Keep track of when a model was trained
+
+commit 7409ce49ee8888c4b71d9c6492ba287c6e197972
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 17 16:00:53 2015 -0500
+
+    Send model training time through Thrift interface
+
+commit f9e88acd4f20643978f3e7bdfaa73c7ddf2cb5e4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jul 17 15:44:30 2015 -0500
+
+    Keep track of when a model was trained
+
+commit 14c975b5be3d6a8cbc8b023ad3690e24f05a452d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 16 14:53:23 2015 -0500
+
+    Adjusted file extensions for tutorial images
+
+commit 0d0036c63945a0bb2946746c5be9024fd060e742
+Merge: 6377f20 3d36847
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 16 14:51:15 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+
+commit 6377f205db3cdea7214e1b1f8f90d9cd24b5cf57
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 16 14:47:51 2015 -0500
+
+    Added a tutorial to the documentation
+
+commit 291c1118a137876bcc874821a831cfd216a4a773
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 16 11:29:43 2015 -0500
+
+    Improved documentation about default attribute generators
+
+commit 24edc4d67f30d29fb4015ef4341871d8a3488957
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 14 20:46:38 2015 -0500
+
+    Spelling fix
+
+commit 39e269463c6236cbdb2252eedc2cec177ab3d0c6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 14 20:40:25 2015 -0500
+
+    Made a separate folder for composition-based attribute generators
+
+commit 3d36847dccdbd251c1a588f758f35c61e9c85eb1
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Wed Jun 17 18:47:56 2015 +0000
+
+    Bug fix: Write newlines even if data contains no class variable
+
+commit 2a6a40f4160c498a80601d85142a6e17dfda8f27
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 15 15:17:44 2015 -0500
+
+    Doc fix: Make links to attribute generators valid
+
+commit 6aec1e13679ed9d4865b2e994750cb59ac1bebcf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 15 15:10:59 2015 -0500
+
+    Sample webpages now output attribute information
+
+commit e1c9d7f327026a3c084daa8a1621fd77651dc288
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 15 15:09:36 2015 -0500
+
+    Doc fix: Made dataset description prettier
+
+commit e5f4c57cd8f4ca9f90983617d987ed7d90f5f88b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 15 14:49:25 2015 -0500
+
+    Print out full dataset description with model
+
+commit 8243e56913623f166b9f1fc1f7e05a75487512cb
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 15 14:48:22 2015 -0500
+
+    Added tests for attribute generator descriptions
+
+commit 35902b3b86f53e5a96127b4d114421fcaad7b37d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 15 14:48:00 2015 -0500
+
+    Print out dataset type and entry description
+
+commit d35b84ce622ce21b3f39189aab5b52c95c539b9e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 15 14:37:28 2015 -0500
+
+    Implemented description of attributes for Dataset objects
+
+commit 3b7233016515581fbd6f3055ddff396a66c24e76
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 15 13:33:51 2015 -0500
+
+    Created separate AttributeGenerator classes for CompositionDataset
+
+commit 4c5a798de259eee85e2bcf7ae89b4502cccff99c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 15 13:16:07 2015 -0500
+
+    Bug fix: include() not supported by Firefox
+
+commit cbd24e0beb87b0838697944967df774fbedca07d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 22 10:11:01 2015 -0500
+
+    Added ability to set oxidation states using double[][]
+
+commit 23d9816c7b3f417c9fd236ece1a6b63bfc22e335
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 12 15:47:04 2015 -0500
+
+    Print out training set size in description
+
+commit 6f20ae79f1f32b1d52ff0c221c73495e84e96fca
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 10 16:55:10 2015 -0500
+
+    Added a few example webpages using Thrift interface
+
+commit 47fe83c6136bb1210e1baf6aa28612e3f996fe43
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 10 13:54:06 2015 -0500
+
+    ScikitLearnRegression now compresses model after training
+
+commit d4baca19c70af1b5f5bd66dd2ad94be3ff6f5abc
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 10 13:29:37 2015 -0500
+
+    Removed timeout from sklearn server
+
+commit 0504d307754354c684677ebc8fc0740ddad0bdc1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 8 10:05:30 2015 -0500
+
+    Removed timeout from sklearn server
+    
+    Conflicts:
+    	src/magpie/models/regression/ScikitLearnRegression.java
+
+commit 1e912e65566c4ae9d83eb74745b73c245dea74ac
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 10 10:15:34 2015 -0500
+
+    Bug fix: Add space after "Submodel #i:" in StagedRegression
+
+commit e7eaacbeabb060e83e09507aea7178410bcbfe90
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 10 09:37:23 2015 -0500
+
+    Implemented model compression for sklearn server demo
+
+commit 1a97a906117d96cb47046a161e94d24ad0f9835d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 9 11:53:17 2015 -0500
+
+    Added override notation to BaseModel printDescription
+
+commit cecaf7ca9a580a1bae26de4af7afdc00051bed8b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 9 11:51:52 2015 -0500
+
+    SplitModel now prints out description of splitter
+
+commit fbe919a628d3e7f00c0ef71633dbc7a11d14c86e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 9 11:42:45 2015 -0500
+
+    SplitModel now prints out description of splitter
+
+commit 919504fa0a1d7a408e14ff82a8b214cfad729083
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 9 11:37:52 2015 -0500
+
+    Implemented details commands for splitters
+
+commit c3be393505d5a7cb758b771ff5b9389eb68656d8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 9 10:20:20 2015 -0500
+
+    Implemented description output for clusterers
+
+commit d81df88fe7dc11b37030cf7e7ada20425cdb14e8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 9 08:02:24 2015 -0500
+
+    Renamed printModelDescription to printDescription and added to Printable interface
+    
+    Eventually, all printable objects will support this opertation
+
+commit 9104e36f6c92e682fd19b18bf4031418a237681f
+Merge: 95d1238 8d770ee
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jun 6 15:27:13 2015 -0500
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+
+commit 95d12383ef2e2a58f5f75d12e9505b9fa757fd97
+Merge: 6d088d2 d7168b7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jun 6 15:26:45 2015 -0500
+
+    Merge origin/master
+    
+    Conflicts:
+    	py/scikit_server.py
+
+commit 6d088d2491eb840b7ad0fff5da71ce0ecb83b3fa
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jun 6 15:26:07 2015 -0500
+
+    Repaired scikit_server example
+
+commit fd722c47c3d85c6c9291b4ed13bde6b4eaf587cc
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jun 6 15:25:26 2015 -0500
+
+    Merged with origin
+
+commit 17d5c796f6a3684b5a8fda7077d1f69f76c621fa
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jun 6 15:22:23 2015 -0500
+
+    Make sure Scikit server is killed on exit
+
+commit e4eb9edb3c660d455b09bf8a3df8805204d5d98e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jun 6 14:35:56 2015 -0500
+
+    ScikitLearnRegression now keeps python running continuously
+
+commit fae286fb138e1a8ae5b619ff74e1037899045b5b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 21:25:15 2015 -0500
+
+    Added example scikit model server and client
+
+commit d7168b7b2eb30adc88583e70ff542bafadf9bde9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 21:25:15 2015 -0500
+
+    Added example scikit model server and client
+
+commit 8d770ee0540a86f80e5c3353d2eed616cf832c28
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 16:22:25 2015 -0500
+
+    Bug fix: Accuracy computed wrong
+
+commit 9649d52514422da56e1edefd565bd05a73fbc718
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 16:22:25 2015 -0500
+
+    Bug fix: Accuracy computed wrong
+
+commit 7d5816c07e96b1a3cd9e55b24da5485d3275b905
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 16:13:21 2015 -0500
+
+    Increased margins for BaseModel output
+
+commit 1174d86e3c396ffbd87f803714aed165a0406b01
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 09:58:45 2015 -0500
+
+    Send validation method via Thrift
+
+commit 0f04e29d7c783fe94b043ec442fdcb459b9d0187
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 09:56:18 2015 -0500
+
+    Made random guess regression deterministic
+    
+    Set the random number seed to be the number of attributes.
+
+commit 615b9e2a860f6f32869619437091432eb97abe09
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 09:56:01 2015 -0500
+
+    Store validation method
+
+commit 89f931994e3100443d0063f07467af6ebe7ea825
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 09:37:49 2015 -0500
+
+    Send more detailed description of model via Thrift interface
+
+commit 9b5ffb52e823b43ee1842e3159960fb92fdeb3af
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 5 09:32:17 2015 -0500
+
+    Bug fix: Handle more allowed terms than known attributes for LASSORegression
+
+commit 73bded8129cf12e83702aedc792832840fac0201
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 4 16:25:09 2015 -0500
+
+    Implemented several model descriptions
+
+commit 324dd52a814a491991d89880175273d3c381056b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 4 13:54:46 2015 -0500
+
+    Bug Fix: Clone for MultiObjectiveRegression
+
+commit 2a9902b2f0453f928313a4cecd375c11669e8ba7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 4 13:54:20 2015 -0500
+
+    Implemented model details for WekaRegression
+
+commit da2141f27a621ea5d3bd067b91d83ce4bacdb279
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 4 11:42:43 2015 -0500
+
+    Clear out property names before importing new dataset
+
+commit dbbeae1f09e6f3fc315f93b57ede867f3ab1c8d4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 4 11:37:40 2015 -0500
+
+    Changed how distance is measured in IonicCompoundFinder
+    
+    Now uses all N elements when computing distance, not just N-1
+
+commit c713849a4483ca1ab56c4e29963a1ff867631175
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 4 11:37:05 2015 -0500
+
+    Broader exception catches when reading in property data
+
+commit e4deae69ed4013b50448f7579e0ac65db499aacc
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 4 11:00:41 2015 -0500
+
+    Bug fix: "combine" is spelled "combine", not "add"
+
+commit bdf52538af899fe9d1bbcfcae5780e2ef1b1672d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 4 10:52:49 2015 -0500
+
+    Added command to combine two datasets
+
+commit 18f45327d6e2900989075693e2e0731b86825dfe
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 4 10:01:49 2015 -0500
+
+    Added tests for CumulantExpansionClassifier
+    
+    Code currently fails for all of them because I don't yet have a test dataset in the repo I can use for this model.
+
+commit d46b22c9171df64d36bac02d17a7cf661f25cb22
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 3 13:44:12 2015 -0500
+
+    Implemented model details for several classes
+
+commit 6c08748994f183a6d925145cec8d810d9b6b1b05
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 3 13:12:13 2015 -0500
+
+    Implemented model details for several classes
+
+commit d72e9727008dd4c33a0c25a76ff105c4739024f9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 3 13:11:28 2015 -0500
+
+    Improvements to details printer
+
+commit 74a2539ce001a8b312cfdd29b180614e8014755a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 3 10:33:55 2015 -0500
+
+    Changed model details operation
+    
+    Implementations now only need to provide list of options
+
+commit 104b91f9b8fb342e2d1ada866ff80017f94a9cd9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 3 10:02:04 2015 -0500
+
+    Added test for printing description to BaseModelTest
+
+commit e16f2f2cae71c929ede551ba9e4425a356e90040
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 3 10:01:36 2015 -0500
+
+    Added tests for NonlinearRegressionExpr
+
+commit 639625005db4d6aeabe506c4313f676fff1fa546
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 3 10:00:54 2015 -0500
+
+    Added operation to set equation to be parsed
+
+commit 3cae22c27fe4b50cb1ea034786b497816ae36bd2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 3 09:47:07 2015 -0500
+
+    Added command to print simple description of model
+
+commit 3d0efffa006fe0c8a25c4f305b057e489be572a6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 2 22:31:20 2015 -0500
+
+    Added cvScore and longer description to ModelInfo in Thrift interface
+
+commit 1ea8f012aa1faebc788520aca4fd08f782218685
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 2 22:29:16 2015 -0500
+
+    Added ability to return performance data as map
+
+commit 51d2c32cacf855fd3cd897686a0458f9d5da5be3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 2 10:22:05 2015 -0500
+
+    Use compression when storing sklearn pickle
+
+commit 493621f3c123a38c4aed573152acb051ba1966a1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 1 15:42:04 2015 -0500
+
+    Switched to using pickle instead of joblib in ScikitLearn wrapper
+    
+    Joblib can write more than one file when saving a model, but our code is designed to only store one. Pickle, on the other hand, will only write a single file always. So, we're taking a performance hit (allegedly) to use pickle, but it makes the implementation much simpler.
+
+commit c9b0d93e933514c60bf1b9d8fc945697c176a6e1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 1 22:37:21 2015 -0500
+
+    Bug fix: Check for classes that implement classifier interface
+
+commit 1d9cc2262941cc855b97657960be37b112406888
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 1 21:39:58 2015 -0500
+
+    Upgraded expr library: Now supports serialization
+
+commit 4abe76e4a5cfa65d2d77b13cc0d31cf259dbc789
+Merge: 8a3352b 58398e3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat May 30 11:28:52 2015 -0500
+
+    Merge thrift
+
+commit 58398e3d8da40b82778481f4bac0c2cc478fbda8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat May 30 11:20:07 2015 -0500
+
+    Enforce maximum entry count for web app
+
+commit 8a3352bc514f769c8d12cc171b70a0bfe9c536de
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu May 28 14:33:17 2015 -0500
+
+    Added more tests to weka transfer
+
+commit d57783017497c05c2f9d17882fbbec0c66a87a6a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu May 28 08:51:30 2015 -0500
+
+    Thrift operations now throw a MagpieException on failure
+
+commit f98e69562745c86ebc2c640a04dec6236326d295
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 27 16:43:54 2015 -0500
+
+    Failed thrift operations now throw exceptions
+
+commit 8c345a04ebfb5187313d69c1e2a930fdb4ef8888
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 27 16:06:46 2015 -0500
+
+    Added notes about training set to ModelInfo
+
+commit c45b50b5ee719b85b6ff451a9f2bb892e6f50eb5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 27 10:07:29 2015 -0500
+
+    Added ability to retrieve class names from AbstractClassifier
+
+commit 8a786189c81d426858f721201e26b94fe2f3da59
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 27 10:06:39 2015 -0500
+
+    Better support for classifier results
+
+commit ba902544362fb585647080db50066c08b65db340
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 27 09:54:00 2015 -0500
+
+    Bug fix: Forgot to train before ranking
+
+commit e31f4838b71584efa41136d27cb06174aaba1945
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 27 08:52:41 2015 -0500
+
+    Added ability to retrieve class probabilities for a certain property
+
+commit b0a764552602910f222f4cee1bfa455ea9890c48
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 27 08:23:37 2015 -0500
+
+    Changed all thrift variables to camelCase
+
+commit fcbcd233f9cca7df0f1da0ccd03e905ce87280ed
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 15:13:48 2015 -0500
+
+    Added thrift command to gather model data
+
+commit 978f0bbb3bdac16e00f01f45207a5e5c03a6650b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 14:56:08 2015 -0500
+
+    Bug fix: Updated python client example
+
+commit 79a4df95e8ac8350b9d083f87d09db6646598479
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 14:17:22 2015 -0500
+
+    Updated Thrift interface to store all predicted properties
+
+commit 4aa39e90837127d48b78c7d2356699c8dcbfb128
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 12:27:09 2015 -0500
+
+    Added filter to allow for crossdomain traffic
+
+commit ce37f768d629f465f6b24e8fc08d3b18d771ab99
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 11:35:32 2015 -0500
+
+    Print status messages when starting server
+
+commit cf943ea282bc8d656b80aa72f3754c1c9f08ecd9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 11:27:51 2015 -0500
+
+    Revamped how models are defined / loaded
+
+commit 92323f16c7b12967dcdfcaa3b9c7d354e25b5c6b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 11:27:14 2015 -0500
+
+    Added storage for model information
+
+commit db2488f33c6733b11b6b3882c66af098841ad86c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 10:04:35 2015 -0500
+
+    Updated tests: New entry generator usage
+
+commit acbefb54c4947da7f8a3a5d498526910e01d95ea
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 09:59:09 2015 -0500
+
+    Added embedded Jetty server to Magpie for handling HTTP requests
+
+commit 7a84138e69eb41f948bd5ffed73bc0d4aa84b579
+Merge: 686da57 472bc95
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 26 08:54:44 2015 -0500
+
+    Merge master into thrift
+
+commit 472bc95b219668e3702c54587cf22f547517c708
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 22 13:58:05 2015 -0500
+
+    Revised how clones work for Datasets
+
+commit 945c58a8ab5ec9220ad8d4936fe0b41a38e11861
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu May 21 13:29:46 2015 -0500
+
+    Bug Fix: Using WekaClassifier without any measured classes
+    
+    Conflicts:
+    	src/magpie/models/classification/WekaClassifier.java
+
+commit 686da573011b3f6a463fbe475fed65ff5d920455
+Merge: c4ce30e 2403e56
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 20 10:01:52 2015 -0500
+
+    Merge branch 'thrift' of ssh://bitbucket.org/WardLT/magpie into thrift
+    
+    Conflicts:
+    	thrift/magpie-client.py
+
+commit 6f3ea9768be425d4014850e36ade744f08e18f56
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 19 13:33:49 2015 -0500
+
+    Added tool to generate only charge-neutral compounds
+
+commit 48840ec52844582521cc7a0937a400c9fb211cdb
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 19 12:18:09 2015 -0500
+
+    Doc Fix: Updated clone documentation for BaseEntry
+
+commit 6bb8a02cb749ed56ecc1c5327a2f2fe0b3aec3f3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue May 19 12:17:40 2015 -0500
+
+    Bug fix: Don't copy class variable when running WekaClassifier
+
+commit 2ce880423e96b7c06ae2db101fadbb8943bbb0b2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon May 18 15:56:24 2015 -0500
+
+    Attribute generators now throw Exceptions
+
+commit cc8341392e6b05d5b2e425853ef85c0bb3f5abdf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon May 18 11:43:21 2015 -0500
+
+    Renamed LookupTableGenerator
+
+commit e370032ba054fa49ed5c1ab8bd2440d4ca66bf54
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat May 16 16:08:08 2015 -0500
+
+    Added tool to add attributes that were generated externally
+
+commit 5d35144b0b4d12c36227eeb20f1787d9f0052220
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat May 16 16:01:34 2015 -0500
+
+    Added ability to add several attribute names at once
+
+commit bb6d2a838f99c28c0eba062534a8d9f3786388f0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 14:29:07 2015 -0500
+
+    Added a bigger test to GCLPCalculator
+
+commit e6d9dbba9cf05f9edc895793c662ecbf0f83ebc1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 14:28:22 2015 -0500
+
+    Added a tool to evaluate a dataset in small blocks
+    
+    Useful if you can't store every attribute in memory at one time
+
+commit 9f8ec7d8840ad1fd39399e29bdaf4615a03263a8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 13:31:16 2015 -0500
+
+    Skip compositions that don't parse correctly
+
+commit a874d38294404b2db8fa7e6bb158a05da7a4325c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 13:09:41 2015 -0500
+
+    Doc Fix: Clarified name of property created for HHICalculationModifier
+
+commit 3a4cdf5ee8f29f18323e0ca1a5e4d7d8d80639af
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 13:01:29 2015 -0500
+
+    Added tool to compute stability for each entry in a dataset
+
+commit ce0c4d956b5f61ab18d713eded3c993740a7087a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 12:59:12 2015 -0500
+
+    Bug fix: Did not retrieve predicted property array when asked
+
+commit 8fa86ba3b2d3fb6312785dcbdef73edf0f99844b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 12:54:53 2015 -0500
+
+    Doc Fix: Wrong usage for PropertyFilter
+
+commit c564d9f09df9164d08c7802f8e32df37a9622aff
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 14:02:10 2015 -0500
+
+    Added Spearman's R and Kendall's tau to regression stats
+
+commit 149a27397ca12c7e494012ea835f2891ea9fc00d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 12:22:22 2015 -0500
+
+    Made error messages for "load" more understandable
+
+commit 88ab47f3ef9827f446e48d6cab0b3afca651cb37
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 11:38:23 2015 -0500
+
+    Bug fix: Using "== Double.NaN" not Double.isNaN
+
+commit e0df9a3aa66c8082a89463f5d2a4cd791e995936
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri May 15 10:37:03 2015 -0500
+
+    Added tool to guess oxidation states
+
+commit 856e340b263d1517fae5e234c413f559ff600315
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu May 14 15:48:49 2015 -0500
+
+    Added a second interface to CartesianSumGenerator
+
+commit 6b7f0a701571e045187e6012d8b10497e5152955
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu May 14 13:03:05 2015 -0500
+
+    Added tool to compute Cartesian sum
+
+commit af0b0c92d07920d9c8b8ae2526281abbdb8c3989
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 13 13:56:43 2015 -0500
+
+    Added a filter based on distance from a target composition
+
+commit 4cdd3d2f209144675c17c59fcef45515059ad0d2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 13 13:52:38 2015 -0500
+
+    Added a no-argument constructor for ClassProbabilityRanker
+    
+    Can't be constructed with "newInstance()" otherwise
+
+commit 51f021223d27118ecb064fa2d3f0abce6e8a3f71
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 13 11:53:13 2015 -0500
+
+    Give more detailed message when property table fails to import
+
+commit 32dcbe825ce40c00671fa6b761cac8d4dfb927da
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 13 11:37:52 2015 -0500
+
+    Throw an Exception instead of Error for Weka instantiation failure
+
+commit 1d6061eeb377f34f7d256f6e822fb27c9f1d0d00
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 13 11:20:37 2015 -0500
+
+    Added warning if property directory is not found
+
+commit 8841d77dfd1f1478389bd1391790adb37182319c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 13 11:13:53 2015 -0500
+
+    Upgraded composition generator to allow on to specify a minimum order
+
+commit e987b8b2440b0c42197add6e9708bc3dc403e4b3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu May 7 14:09:37 2015 -0500
+
+    Added tool to replace NaN values with mean
+
+commit 41af6543375f79a66a4c4291c0238a1e40171efd
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu May 7 10:09:11 2015 -0500
+
+    Added an example for using sklearn
+
+commit bce0694aec74084d9970ae083cbeb20a357bc808
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed May 6 14:48:45 2015 -0500
+
+    Added sklearn wrapper
+
+commit 7acf71bca1972b9d5aa152b77b8ad9dad554f604
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Apr 16 16:35:27 2015 -0500
+
+    Added tool to generate nearby ionic compositions
+
+commit a04b62efc484e49e24882b5910dba789563cbff0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Apr 8 08:54:44 2015 -0500
+
+    Warn when trying to print CSP validation results before validating
+
+commit 752607f4fdf04181643c1bd750b3af375a0ca81b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Apr 8 08:52:06 2015 -0500
+
+    Added command to output crystal structure training set
+
+commit 4f4dbf85b7dd732e4ca7474d08af49610251539e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Apr 5 14:51:43 2015 -0500
+
+    Added ability to store custom attribute generators
+
+commit a1bf22510c677ead91aae014dfec4ed8e0278b23
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Apr 5 14:41:13 2015 -0500
+
+    Made attribute expanders serializable
+
+commit c7e215fc93a7318627693fcb2f00a7f2a01c6341
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Apr 5 14:40:46 2015 -0500
+
+    Overhauled how attribute expanders are used
+
+commit e43f251ee83c31be38523a6eaaef9af12f631b69
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Apr 5 10:28:22 2015 -0500
+
+    Added permutation generator back in
+
+commit e48e5b1732bded526d7d3cc063b20a983fd701e2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Apr 5 10:22:56 2015 -0500
+
+    Added normalizer that inverts class / attributes
+
+commit 3e09d9f6668253d38a6afe917775bf57310ab0df
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Apr 4 15:50:50 2015 -0500
+
+    Made normalizers serializable
+
+commit bb94b03885144dfa1ba29bea17f87a1194a08bba
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Apr 3 21:10:34 2015 -0500
+
+    Bug fix: Improved math in linear correction term
+
+commit 983a3c1120160890e19b15bec526a12db5be0489
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Apr 3 20:29:30 2015 -0500
+
+    Changed name for corrected model to match style
+
+commit 7ef8dede2031892777301c1650a2408c5f1354ff
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Apr 3 20:19:10 2015 -0500
+
+    Bug fix: Setting measured instead of predicted class
+
+commit 4f0e700b941c1867474160b5ae037a2dde4dda9a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Apr 3 17:12:10 2015 -0500
+
+    Added model that will apply linear corrections to another model
+
+commit 853162021c9f1505f00548820bfa620d06e074e1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Apr 2 16:51:27 2015 -0500
+
+    Added base class for generating new attributes
+
+commit 930944ed36d8602dc2f93e79e7acf9c8eb0a2e91
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Mar 30 16:46:26 2015 -0500
+
+    Bug Fix: Need to copy class variable when running Weka model
+
+commit 27cd3affccfcefe2e7343cb68bc8d14cc9c9dc8b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Mar 30 16:45:21 2015 -0500
+
+    Bug Fix: Correctly check which elemental properties are missing
+
+commit bce18a627c0b30749d691fdd29002a9ce1defbea
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 24 09:14:40 2015 -0500
+
+    Minor changes to RankAggregationRanker
+
+commit 69bd75c5a6d7cbe0eea17049b7025e6562aaf822
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 24 09:31:40 2015 -0400
+
+    Reduced memory footprint when calling Weka
+    
+    Now, clears attributes from Magpie dataset when converting to Weka format. After the call to Weka, attributes should be copied back from the the Weka object
+
+commit c76547a641c80e4769232638f7f0533b09286453
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 24 09:24:00 2015 -0400
+
+    Added tests for WekaAttributeSelector
+
+commit 1bc840444d2f97d54eb384f40d7f9b5f49b352f6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 24 09:16:57 2015 -0400
+
+    Added tests for WekaClusterer
+
+commit b635feb35a16387d615649e3bd81fd2e1bcd9dcc
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 24 09:10:18 2015 -0400
+
+    Added tests for WekaClassifier
+
+commit a6d1b490e9b41326e2da25cdb27ee90f7205fe8b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 24 09:10:01 2015 -0400
+
+    Added tests for BaseClassifier
+
+commit 5342970fe67cd8f1bb376c4869be1cd596235c0c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Mar 22 20:55:33 2015 -0500
+
+    Reduced memory use when converting to Weka format
+
+commit 3e104ff84f4304c959580468c6a27eb35bbe0fca
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Mar 22 11:01:14 2015 -0500
+
+    Improved GCLP documentation
+
+commit 1d06ae0cffcfcd1ebeb237376e144521c9f2244f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Mar 22 10:55:44 2015 -0500
+
+    Added ability to perform GCLP
+
+commit c4ce30e0a169c62d4cfbad832016d060d9928524
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Mar 22 10:38:58 2015 -0500
+
+    Minor comment fix in Python client example
+
+commit 2403e56f947086c1317a8df669d9635caf9f5715
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Mar 13 14:15:23 2015 -0500
+
+    Minor changes to python client
+
+commit 4b7b82455db0fc2c2a3d7b5aa8785acb9be42e0e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Mar 11 16:16:46 2015 -0500
+
+    Added attribute selector design to exclude certain attributes
+
+commit 135934c45ab32d18deb28802328b823d795612c9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Mar 11 15:46:22 2015 -0500
+
+    Bug fix: Error in restoring class variables after attribute selector
+
+commit 9972f924ef77efb3b5ebb4c6b68853e4308ba732
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 10 13:21:32 2015 -0500
+
+    Added ab
+
+commit 77d5c65a80fdfbb94c7e20d2cd92c75b024434bd
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 10 12:42:15 2015 -0500
+
+    Store measured and predicted class values when computing statistics
+
+commit 4245b9153df66e8a903ac58ae0b6e2e7d5c924d9
+Author: ward6_000 <ward6_000@ltw578-desktop>
+Date:   Tue Mar 10 10:33:57 2015 -0500
+
+    Bug fix: Improved SplitModel clone operation
+    
+    Was neither cloning Partitioner nor checking if models were set before cloning
+
+commit 2159671b9b4f35a1e701385a5d3a84331eef6a7d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 10 10:32:22 2015 -0500
+
+    Added tests for SplitModel
+
+commit 6562c1c2222cf9d28e4e1808708510c7c7da7e08
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 10 10:23:20 2015 -0500
+
+    Bug fix: Forgot to check if AttributeSelector was set before cloning in BaseClusterer
+
+commit b05ba04885ebe4612378070ee35782ebe29d4665
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 10 10:20:42 2015 -0500
+
+    Implemented clone operations of splitters, rankers, clusterers
+
+commit 77eacc17406996ff81ea59a2c955234707219c6d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Mar 9 13:23:29 2015 -0500
+
+    Upgraded FunctionExpander: Performance optimization for large datasets
+
+commit 150cbfeea94922b93ba44412eb2ebf87195766f5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Mar 7 07:11:05 2015 -0600
+
+    Fixed some typos in documentation
+
+commit cde3da0be0fd64b9237b4815c5a0c615ad94938d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Mar 7 06:59:22 2015 -0600
+
+    Added new access function to ParsedFunction
+
+commit 6fbf605d76824354731a0be47aaa6f02a4a29642
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Mar 6 19:19:03 2015 -0600
+
+    Added ability to expand attributes using user-defined combinations
+
+commit e7bfa519695c594eebf370dbf006e3684cceb40d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Mar 6 19:16:31 2015 -0600
+
+    Fixed BaseModelTest
+
+commit 740463640e2ec2c9311bd6e1275960c675bf692f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Mar 6 16:46:52 2015 -0600
+
+    Added utility class to parse a functions from a string
+
+commit f7a40be0780db3cbcdac0226573af4b0518e9f2e
+Author: Logan <Logan@Logan-Laptop>
+Date:   Thu Mar 5 17:29:40 2015 -0600
+
+    Bug: Training a model after validation erases validation data
+
+commit 603ca9ad68fc29b9c46dcdf93f557464bc3a797d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Mar 4 18:06:25 2015 -0600
+
+    Added a generic testing superclass for models
+
+commit 4039a6db7b497fd61806f2d16ba2be50e3174c58
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Mar 4 15:10:05 2015 -0600
+
+    Bug fix: Forgot to assign class variable when reading ARFF
+
+commit b72c0266b271f0f675741cddf344beae65c6b4eb
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Mar 4 14:56:50 2015 -0600
+
+    Added ability to read ARFF files
+
+commit 3c53ddc7c92a74e09c7e422da296b665e4970bd7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Mar 4 06:33:07 2015 -0600
+
+    Bug fix:Typo in DatasetOutput
+
+commit cdd5ef178688b339060bc691ee76c03b838749b1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 3 14:11:12 2015 -0600
+
+    Bug Fix: Fixed "rank" function of Dataset class
+
+commit 3667d311cc4b2bd803f672f2bc8e1fe7b863bcce
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Mar 3 13:08:29 2015 -0600
+
+    Upgraded AreaUnderROCEvaluator to handle more than 2 classes
+
+commit 8a45f18ee278ae2c3479cab796147163a2b57f94
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Mar 2 17:07:55 2015 -0600
+
+    Bug Fix: SplitModel throws error when model #1 is user-defined and 0 is not
+
+commit 4f5fce8fb89d5fb5ef7685cc17e20ae493a6952f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Mar 2 16:52:12 2015 -0600
+
+    Bug Fix: Clone and model printing in LASSORegression
+
+commit cb0792d2e53235ca55f144314022500559eac88e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 25 07:52:51 2015 -0800
+
+    Added ability to generate PrototypeEntries with mixing on each site
+
+commit f838a8bd2f8857eead0632cf081b27e6b60377af
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Feb 24 11:13:48 2015 -0800
+
+    Bug Fix: No longer generate duplicate composition when generating "crystalline" phase diagrams
+
+commit 00d3dfd40124064a710be3b23ff2dfbe94d6180e
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Sun Feb 22 00:21:21 2015 +0000
+
+    README.md edited online with Bitbucket
+
+commit df01bd084d09848334173d3730b43cba144f2e8d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Feb 19 11:23:42 2015 -0600
+
+    Added a simple webpage for testing the Javascript Thrift interface
+    
+    Currently not working!
+
+commit 92d499072e830a4232033caff79cfbe6be27d855
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 18 22:43:34 2015 -0600
+
+    Bug fix: Import Weka libraries before loading models
+
+commit b471d4b4945fb297287e91b82868fc5363779f3f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 18 16:25:06 2015 -0600
+
+    Cleaned up Python client
+
+commit 3d4a23af451554d412e4cd8436762985b8fcce6d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 18 16:21:46 2015 -0600
+
+    Added sample Python client
+
+commit 1f6a37e5281243c7cb1c16ea734bb63e99aeb30c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 18 16:06:04 2015 -0600
+
+    Bug fix: Compute attributes before running model
+
+commit 806355981355bd7572f2686ddafdfddd068ab893
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 18 12:06:01 2015 -0600
+
+    Bug fix: Error with mixing on both sites of PrototypeEntry
+
+commit c10a4365a81ae3af97aed59e38094c54e94a9771
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 18 10:44:56 2015 -0600
+
+    Evaluate command now prints class name if available
+
+commit b27417410e5af4ff95e45b70c11d683de3955bea
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 18 10:37:41 2015 -0600
+
+    Improved data importing for PrototypeDataset
+    
+    Now supports reading properties with discrete, named values (e.g., types of distortions)
+
+commit afdf4f77d85c7a78fa7506983a9cdb1fcd486b27
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 18 10:26:54 2015 -0600
+
+    Minor improvements to ServerLauncher documentation
+
+commit bebd8c48e44788cf5ed04adfa07b0a5202946754
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Feb 17 12:12:39 2015 -0600
+
+    Added multi-objective search to server interface
+
+commit d3129d6cac2f5426e4087c9e76906a91d83d8a51
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Feb 17 11:42:41 2015 -0600
+
+    Added single-objective search to server interface
+
+commit 0454cf2ceba380756a1f4ade49f25d5ef34140e3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Feb 16 14:32:40 2015 -0600
+
+    Forgot to add calculation handler to commit
+
+commit b54ddfb3262df8c94afb213610a461176dd3ddcb
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Feb 16 14:15:56 2015 -0600
+
+    Finished implementing the "evaluateProperties()" command
+
+commit a73728a6cf75e2758c477913e6ac3c2159a6f9f6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Feb 16 14:05:09 2015 -0600
+
+    Major shift of Magpie server to Thrift
+    
+    Not yet fully functional
+
+commit af40388fe2d55e5b5521c3ade9e53444e6e17b45
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Feb 12 13:43:36 2015 -0600
+
+    Added auto-generated code from Thrift to tracker
+
+commit 9a3f910334ccd953d74c21e9105e711f3533a74e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Feb 12 13:39:30 2015 -0600
+
+    Added a Thrift interface definition
+
+commit f19096a465d0e11e108036c27d434a75375d5024
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Feb 12 13:35:29 2015 -0600
+
+    Started new branch: Switching server to use Thrift
+    
+    Goal: Make an API that is easily accessible to codes besides Java
+
+commit ed84830aa2476792a85b71a9b6226735996da612
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Feb 6 18:10:58 2015 -0600
+
+    Improved printing for CSPEngine list lengths
+    
+    Now evaluates success rate for every length of list between two
+    user-specified points
+
+commit d19318f5ef4dbc61e8ad2f3191d530d89c86aa30
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Feb 6 15:13:50 2015 -0600
+
+    Doc Fix: Bad format in BaseDatasetSplitter
+
+commit f08d2489fc24df6210a950dac213a7e4409c02f8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Feb 5 09:09:56 2015 -0600
+
+    Bug fix: Options on ClassIntervalModifier weren't usable
+
+commit 2a20395b8be20f9360aea13984aca211e40a211f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 4 16:51:17 2015 -0600
+
+    Added status messaged after DatasetSplitter commands
+
+commit ee84f2b4287367df1c0bdc51af6c034822963771
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 4 16:18:29 2015 -0600
+
+    Fixed grammar error in 2nd line of manual.
+    
+    For shame!
+
+commit de7fd5bb0d00a743f5f71b2d831203c1fa4c63b1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 4 16:14:46 2015 -0600
+
+    Added link to Javadoc to front page of manual
+
+commit e5f2e019de943977cdab022a18ea08f6220dde6b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 4 15:53:55 2015 -0600
+
+    Added text interface commands to dataset splitters
+
+commit a88d9925ee854c990bd4239462a7b3d0272a28e2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Feb 4 09:42:28 2015 -0600
+
+    Bug fix: Exit after printing about for command supplied to a BaseClusterer
+
+commit 0bacb882906cce810a2fb25bc96f6e7a83708db4
+Merge: b84f1aa 7580ab7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Feb 3 17:00:43 2015 -0600
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+
+commit b84f1aa085cb19c7d0257d940f6f1755e2607a05
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Feb 3 16:59:39 2015 -0600
+
+    Added tests to Ant build.xml
+
+commit 7580ab745b47296fd52d98323a8a2160c2756954
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Feb 2 21:37:12 2015 -0600
+
+    Refactored CSPEngine to make getting a training set possible
+
+commit a8780ff4eacf7700e961209d100599c64fde3a76
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jan 30 13:03:47 2015 -0600
+
+    Added tests for DMSPEngine (and also some for the base class)
+
+commit 452e0adcb9625b9ea87fe286a7a973960ba61f83
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 27 17:10:38 2015 -0600
+
+    Added ability to perform leave-one-out cross-validation to CSPEngine
+    
+    Also, fixed a bug that was resulting in only the first fold running during validation of a CSPEngine model
+
+commit 9517be434c1473dcb769509d14ffc5517b14c869
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Wed Jan 21 14:55:27 2015 +0000
+
+    README.md edited online with Bitbucket
+
+commit aef09968a31271f3c9c9e8ed982e73bba3f03a3e
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Fri Jan 16 20:47:21 2015 +0000
+
+    Corrected documentation about area under the ROC curve
+
+commit 23923445823b574e86701282f900238f996c64bf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jan 15 16:49:33 2015 -0600
+
+    Bug fix: Problem with attribute selector
+    
+    After changing how I stored the attributes within BaseEntry, I don't think I ever made sure the attribute selector code worked. It was totally broken.
+
+commit 2c375bd5a8c482cbb485a348bb7f83b5e02ad481
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jan 12 15:14:17 2015 -0600
+
+    Added crossvalidation to CSP example
+
+commit 7f5e0428a82d9cd57ffb3803847563f48a2a82c0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jan 12 14:59:52 2015 -0600
+
+    Bug fix: Now return clones of element and fraction vectors to avoid overwriting
+
+commit 7885741acd0422248bc15a49053aa85e1c5591b1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jan 12 11:37:40 2015 -0600
+
+    Misc small documentation fixes
+
+commit 860f978270da203b21e1d4de1b0de56ca3434205
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jan 12 11:35:40 2015 -0600
+
+    Minor documentation fixes for CSPEngine
+
+commit c60ab96c20e552f9a9957ae6a891911425fde5a8
+Merge: 01f38db 033d0be
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Mon Jan 12 11:32:33 2015 -0600
+
+    Merged wolverton/magpie into master
+
+commit 033d0be0f08e54f5d5c8f15c4359d40ecb041388
+Merge: 391239f 89e1efa
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jan 12 11:30:52 2015 -0600
+
+    Merge branch 'master' of ssh://bitbucket.org/wolverton/magpie
+
+commit 391239f846dde8ddcaeecee850dd898d10fa74fb
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jan 12 11:30:22 2015 -0600
+
+    Added list of stable prototypes used for CSP
+
+commit 89e1efa88d1721b4d170e8afccd1cc5f461706f3
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Mon Jan 12 12:59:26 2015 +0000
+
+    Updated license
+
+commit c5745e970c5b9d04b7ef924750b68406c07c2c97
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 7 11:28:58 2015 -0600
+
+    Yet another bug in the documentation
+
+commit 6772eac679c8d9db11ab81c9087062eb75aa3358
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 7 11:26:30 2015 -0600
+
+    Changed links to point to new home for Magpie
+
+commit f6abd83e60bcf504cc0edc6aeff00da4e4ed7044
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 7 11:19:58 2015 -0600
+
+    Made a better introduction to documentation. Still not 100% happy with it
+
+commit 14a4d51b6e594f39b4e517f72557da0d15c24b7b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 7 08:41:03 2015 -0600
+
+    Fixed minor typos in doc, and added a message about how to generate variables.html
+
+commit 01f38db73c8693155aaad943c74ddd7761929ebc
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jan 7 07:48:52 2015 -0600
+
+    Further edits to documentation
+
+commit b21a79de9008931b2a6dcdfa32e91409a7aa004f
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Wed Jan 7 12:50:14 2015 +0000
+
+    README.md edited online with Bitbucket
+
+commit 6742875817b76342c721390723294025641cd7a2
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Wed Jan 7 12:49:43 2015 +0000
+
+    README.md edited online with Bitbucket
+
+commit bd98f36f6b1b2c3bce3326eaa1aec2ffad1e3e85
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Wed Jan 7 12:46:05 2015 +0000
+
+    README.md edited online with Bitbucket
+
+commit b7b1a33e9cc37a8ee0c3bb71770020a5375ce807
+Author: Logan Ward <loganward2012@u.northwestern.edu>
+Date:   Wed Jan 7 12:45:35 2015 +0000
+
+    README.md edited online with Bitbucket
+
+commit 450a4124262f3b04ac7a9099782d81d1496e11fb
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 6 17:23:30 2015 -0600
+
+    More edits to the documentation
+
+commit 3f9491737105a8c207befa5b136582417491c8db
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 6 16:30:06 2015 -0600
+
+    Minor improvements to documentation
+
+commit 244f1e23b975efad9be95206e22912cc25f43797
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 6 16:11:46 2015 -0600
+
+    Improved online documentation
+
+commit 15843e4b28a6b31f90fdd260fdfb80a5f16598e6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 6 12:04:25 2015 -0600
+
+    Remove license header placeholder from all files
+
+commit 914b0a61d840f617fd68f240a87c54a05e6a589e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 6 10:37:52 2015 -0600
+
+    Removed to-do.list. Issues will now be tracked using BitBucket
+
+commit dcf2658b8e2d2418ae7747b507cd9e534da7c10f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jan 6 10:26:17 2015 -0600
+
+    Added license
+
+commit a356c66f6af026aea722c1368ad5f44aff1289c2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Dec 24 10:17:05 2014 -0600
+
+    Bug Fix: Improved ability to check whether an entry has a specific property
+    
+    Now returns false if index >= Number of properties
+
+commit b36611ee2d1d4d4eac0628363e9a69d41d48e64a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Dec 18 07:40:28 2014 -0600
+
+    Bug Fix: Repaired setOptions in ContainsElementFilter
+
+commit e403a1e5935267f2619fe4d014420168a815309d
+Merge: 0c3ce2d 23a1bea
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Dec 16 15:29:59 2014 -0600
+
+    Merge origin/master
+
+commit 23a1beafcd8819d20c9c84b8d8fad49c5b3f3ec3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Dec 15 20:43:07 2014 -0600
+
+    Doc fix: Repaired MeredigAttributeSelector usage statement
+
+commit 0c3ce2d9607cb13bed5f43b5ffe01acb170ebfbd
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Dec 8 12:56:46 2014 -0600
+
+    Added filter to select only attributes used by Meredig et al
+
+commit b1ee5b45ad02e2b267d1f14d327496f65152635b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 17 18:02:49 2014 -0600
+
+    Edited BaseModel implementation guide
+
+commit 658a815d2d1eefa56fa793cc99d67893fcbea85d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 17 18:01:16 2014 -0600
+
+    Edited implementation guides for genetic operators
+
+commit e34a0746997757cb867e1aa5aa2435664a2d5ba9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 17 17:57:29 2014 -0600
+
+    Added implementation guide to EntryRanker. Renamed to BaseEntryRanker
+
+commit 526203260910cf4c1da54fae2284e4aad91c1bc5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 17 15:00:41 2014 -0600
+
+    Made CompositionEntry output prettier
+
+commit 7539d35ae642cd8eec77b03d92b1c4ae2a97e5be
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 17 14:41:14 2014 -0600
+
+    Server now formats entries in HTML format
+
+commit 16d300e9b0f6575603ba5bba41520006b3a4ccf9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 17 14:02:56 2014 -0600
+
+    Made output for single-objective search for finding entries likely to belong to a certain class
+
+commit 1a461313754392241e691da0c52c97d6e0ec520f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 17 13:49:47 2014 -0600
+
+    Bug fix: Missing "break" in case select
+
+commit 52e12e452a10bc09e59381731bb8208b64391ea4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 17 13:36:01 2014 -0600
+
+    Added ability to remove compounds from training set for CSPEngine models
+
+commit 278545a10e0d05b68feb6794d8b591dff973e238
+Author: Logan <Logan@10.101.59.196>
+Date:   Mon Nov 17 13:33:26 2014 -0600
+
+    Added server command to search for entries most likely to be a certain class
+
+commit ad8e5e7d75e65e27b13209169b437397d4a82e9d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 17 13:32:48 2014 -0600
+
+    Added ability to rank entries by probability of being a certain class
+
+commit 708b414aeb99e6f7f011583c705bec2ae2af7108
+Author: ward6_000 <ward6_000@ltw578-desktop>
+Date:   Thu Nov 13 13:49:17 2014 -0600
+
+    Added CompositionDatasetOutput
+
+commit f114253b36f49825a38229acb6dbfa977308e32f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 12 15:42:58 2014 -0600
+
+    Doc fix: Removed dire warnings from Javadoc b/c that problem had been fixed
+
+commit 7b4f4086688e66953eb6a691df615edb8b9361f4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 12 14:47:20 2014 -0600
+
+    Bug Fix: Handle blank lines at the end of input file
+
+commit ac62e8dedfd5dc1a5b2712d84ea8b96aeb71e7a7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 12 13:52:59 2014 -0600
+
+    Bug fix: Won't get correct number of candidates if input is not divisible by 20
+
+commit e2b44a95f964365825a5ae967885fb28ae3a197e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Nov 12 08:57:57 2014 -0600
+
+    Spelling Upgrade: Mendelev -> Mendeleev
+
+commit 18f8c7eaa93833c5fd3077df1a18379d9dfc94e6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Nov 3 07:18:02 2014 -0600
+
+    Changed how entries with duplicate compositions are handled
+    
+    For duplicate entries with discrete properties, the lowest-index value of the property is chosen
+
+commit c2496b4fa01015ea677a0813ecfe1710e812c8e7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 16 12:08:12 2014 -0500
+
+    Fix CompositionDataset UI docuementation
+
+commit 40ba80392e707ec89b3ca55c149ea9cc91406120
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Oct 14 15:07:57 2014 -0500
+
+    Added CrystalStructureDataset
+
+commit 5c6beefe8defae78bcc9c2ed1fffab06e1686af0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Oct 9 16:07:41 2014 -0500
+
+    Added a draft of a "How to Contribute" document
+
+commit 055daa2925a237ec1b4d10492f3de66cca7a96c6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Oct 3 12:40:26 2014 -0500
+
+    Added server mode to Magpie
+
+commit b2378a841a81edf52358f54640b9a7f42f60a480
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Oct 3 12:14:15 2014 -0500
+
+    Doc fix: MultiPropertyRegression
+
+commit b9af7da7a6af43532ccc0516d9816bd4cf7c19a3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Oct 3 12:13:33 2014 -0500
+
+    Ensures that models now do not alter order of entries
+
+commit c5c361c0ec1be06b11db27114f7001f8e84a0d37
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Oct 3 12:12:49 2014 -0500
+
+    Rather than crashing, now does nothing when MultiPropertyDataset.addProperty gets duplicate name
+
+commit 655a12b52d6bfac4f354d34da1ba4be3e819ed0a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 24 09:58:22 2014 -0500
+
+    Bug fix: EntryRankerFilter crashes if N < number of entries
+
+commit e7e890ce70416c554c560eeaf04b4218797b9399
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 24 08:21:40 2014 -0500
+
+    Improved EntryRankerFilter java interface, made it trainable
+
+commit 62ec0ad2ed18db8e66f1c0b59cd6346110c82d29
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 24 08:20:54 2014 -0500
+
+    Made all entry rankers trainable.
+
+commit b8cce0e35ba8d9626a59567475bc08a7d75987d3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Sep 23 13:23:49 2014 -0500
+
+    Dataset's addEntry(String) now return link to new entry
+
+commit 5883b645a6bb15bdea5e46c714cbf2e6bc8af045
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Sep 23 11:42:10 2014 -0500
+
+    Added warning about entries changing order after run command
+
+commit 46cd1de1d33c3f221344813a38c3a029e2960f9e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Sep 18 11:30:15 2014 -0500
+
+    Added new dataset modifier: SetClassNamesModifier
+
+commit 87b840c652b40addd2f736a7831bdc81a17de14e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Sep 18 11:23:32 2014 -0500
+
+    Bug fix: NonZeroCM had class names backwards
+
+commit 21c73ad4e6161552f686c99007346c0b96192842
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Sep 18 11:21:10 2014 -0500
+
+    Upgraded classifiers to store names of classes they distinguish between
+
+commit f527406ae0812397840bcccc0ff6b942d6056a57
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Sep 18 10:58:18 2014 -0500
+
+    Bug fix: CompositionEntry did not crash when provided with garbage input as composition
+
+commit 3100db7e810230dcd281663809e61c1a039e30a4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Sep 18 09:41:33 2014 -0500
+
+    CompositionDataset now stores oxidation states internally
+
+commit 1ee841c6f309753514e5ef894c5a07cf7c3d4122
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Sep 18 08:04:30 2014 -0500
+
+    Bug Fix: Incorrect path in confirmation on saving object with serialization
+
+commit 1327f3e74fe5250ccafd0011da4f6105b6b843aa
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Sep 17 05:33:11 2014 -0500
+
+    addEntry now throws Exception if entry fails to parse
+
+commit 55ad62ec4e2535042a5074c7402c392aa5c92643
+Author: Logan <Logan@Logan-Desktop>
+Date:   Wed Sep 10 10:09:55 2014 -0500
+
+    Added ClassEliminationModifier
+
+commit 9e32c8c5826efb8ae2cb9336189409604ba7502b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Sep 8 10:03:04 2014 -0500
+
+    Improved documentation for CompositionDataset input files
+
+commit ac31b31c158538ebe95c373ca31a34a25ffa793b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Sep 5 18:38:38 2014 -0500
+
+    Added modifier to change discrete classes to a single, continuous one
+
+commit 71c9ade8664bef6e73480ae313f0022bcb5ccafd
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Sep 5 18:34:08 2014 -0500
+
+    Added support for MultiPropertyDatasets to entry generators
+
+commit 99c5a212fd3c3a757cccbda4aade49599a67cd20
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Sep 5 18:08:11 2014 -0500
+
+    Added phase diagram filter
+
+commit aefd8bb380c9cdc1cf63a8717956d1c13051fb70
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Sep 4 20:28:39 2014 -0500
+
+    Added ability to import CompositionDatasets with discrete properties
+    
+    Example "discrete property": Is it a metal, semiconductor, or insulator?
+
+commit f6e170c5b39609727f50e8e795f8411117128c2f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Sep 2 12:22:23 2014 -0500
+
+    Doc Fix: Missing </i> tag
+
+commit 62f8f0285f268ed1e0bab1b9523fb1de146c9c67
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Sep 1 11:05:31 2014 -0500
+
+    Removed warning about crm.in not working
+
+commit 28a8b2174dacda60be3d9bad7e2d37c6b08dd54c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 27 13:25:20 2014 -0500
+
+    Added a phase diagram generator
+
+commit 7b387a113cc3f022a1953aa31c127a3792e68314
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 27 11:47:59 2014 -0500
+
+    Upgraded Apache Commons Math to 3.3 from 3.2
+
+commit 1cc007d8351ce46715f28fb3d473858e1b07eba8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Aug 26 16:43:02 2014 -0500
+
+    Added EqualSumCombinations tool
+    
+    Generates all possible lists of nonnegative integers that sum to a certain value.
+
+commit ea1aa046c3268b06876e7b2942b9666490115981
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Aug 18 10:07:31 2014 -0500
+
+    Doc fix: Syntax error in GridBaseEntryGenerator
+
+commit d8ce0a1a3247ed04e8444cd6b915000331f677ff
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Aug 15 08:59:45 2014 -0500
+
+    Doc fix: Syntax error in Dataset
+
+commit 2a4c1b91850741f58346dcebdb186f0940db7fe7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 13 11:16:17 2014 -0500
+
+    Added basic entry generator example: generates grid of BaseEntries
+
+commit c7b2168c9dbf04e050e80c0e29ff3538878f5ff9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Aug 13 11:15:32 2014 -0500
+
+    Added basic entry generator example: generates grid of BaseEntries
+
+commit 94ea039af983212bc3b1dbb2da7338e61d2a9047
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Aug 7 10:44:18 2014 -0500
+
+    Renamed "dataset" generator to "entry" generator (closer to what it actually does)
+
+commit 62a64ae5e2b0a9b04f968c0ae0b6a4604a193e5f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Aug 7 10:41:09 2014 -0500
+
+    Added base class for entry generators.
+
+commit b993dde4440892bdab275c786c34cc0e891598d9
+Author: Logan <Logan@Logan-Laptop>
+Date:   Thu Aug 7 10:25:07 2014 -0500
+
+    Added ability to generate empty clones of a dataset
+
+commit 238933d8ccb4cce1df3906842dbdaaee7fe21078
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Aug 5 13:26:41 2014 -0500
+
+    Added modifier that adds properties to a dataset
+
+commit 51e6f573c8cf3a006d0205991369b366fbc35f8f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Aug 5 11:33:52 2014 -0500
+
+    Bug Fix: Passing empty command to CompositionDataset crashes
+
+commit 3b05c31504825a68ae8aba5c74c6fc1df46b36ff
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Aug 5 11:24:21 2014 -0500
+
+    Added a outlier filter based on interquartile ranges
+
+commit 995a6cb6919a0fa260b89d7f5e5a90a3c031e1bf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Aug 5 11:20:44 2014 -0500
+
+    Bug fix: Problem with StagedRegression  with absolute errors
+
+commit 35af559a91339fd667471e9b4c9902838a2aacf6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 29 09:43:11 2014 -0500
+
+    Marked to-do item complete: Added ratio attributes
+    
+    No real effect on bandgap models. Maybe CSP or metallic glass models would find more use for them
+
+commit 3551eea3b133e878b3c099c539e7f62bbca4e7a7
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 29 09:41:47 2014 -0500
+
+    Upgraded ErrorSignalModifier to produce either absolute or relative error
+
+commit 76fdf8f6f83df55d99e8cbb77573912fd624acc0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 29 09:31:46 2014 -0500
+
+    Bug fix: Fail loudly on usage error in StagedRegression
+
+commit e8bf9128ee4196c6a1e1a8afa85382e788b98fc6
+Author: Logan <Logan@Logan-Laptop>
+Date:   Mon Jul 28 17:45:53 2014 -0500
+
+    Upgraded StagedRegression to utilize both absolute and relative errors
+
+commit aa0755f30e942a69b5e5d92e05089d439e0484f8
+Merge: fc6beb3 fc65df0
+Author: Logan <Logan@Logan-Laptop>
+Date:   Wed Jul 23 18:53:41 2014 -0500
+
+    Merge origin/master
+
+commit fc6beb3f5e665cb2a027f209a706d144c7edfff6
+Author: Logan <Logan@Logan-Laptop>
+Date:   Wed Jul 23 18:28:53 2014 -0500
+
+    Added in basic timing commands.
+
+commit fc65df0d0ca6fdc82059af7c66c801d8de98caa1
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jul 19 17:43:29 2014 -0500
+
+    Updated results about ratio attributes
+
+commit eb52bee5cb7e16d3dd81074414c6f60a55dfbbbc
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 17 21:06:28 2014 -0500
+
+    Added test framework for attribute selectors
+    
+    Uses the regex selector for now
+
+commit a4e89b3b5e4554ff3b9ad6a060f4918f8c4b1c39
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 17 21:05:47 2014 -0500
+
+    Added a method to select attributes based on regular expressions
+
+commit 91a3d4fb9726624ebb01c88406b696f5c4ba8956
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 17 21:05:10 2014 -0500
+
+    Updated documentation of attribute selectors, made options settable from Java
+    
+    Also made it so that they are marked as untrained when you set options
+
+commit febd00a3b6cf441ad64c4a9d9536dab77811c9b4
+Author: Logan <Logan@Logan-Laptop>
+Date:   Wed Jul 16 11:49:24 2014 -0500
+
+    Added an experimental CompositionDataset for testing new ideas
+    
+    Right now, it has "ratio" attributes
+
+commit d65492dfd9672176247736d2f27eefc533ffe6d5
+Author: Logan <Logan@Logan-Laptop>
+Date:   Wed Jul 16 11:37:53 2014 -0500
+
+    Changed attribute generation code
+    
+    Instead of overloading the public operation generateAttributes() in each class, now has a separate protected operation that performs the computing. This way, erasing the old attributes and performing garbage collection is handled by the base class.
+
+commit d66538953da5ae62a9d15f7247a7dd3dc2411763
+Author: Logan <Logan@Logan-Laptop>
+Date:   Wed Jul 16 10:19:04 2014 -0500
+
+    Added command to configure whether to use composition as attributes
+    
+    Changed and added commands (both in text and Java interface) to CompositionDataset.
+
+commit bea28e413c8ce2a1b182faa1bd5cf2fcfb08a2cc
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 15 08:31:12 2014 -0500
+
+    Added BaseRegressionTest
+
+commit 5b2afad62fd1bf20606292a8d791f2658123a886
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 15 08:30:33 2014 -0500
+
+    Test models with dataset that has some unmeasured entries
+
+commit 0a8141e0c37f378d38b722448519f3a00d2f075f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 14 17:03:58 2014 -0500
+
+    Set PolynomialRegression order from Java interface
+
+commit d0b2e0c7efeb187e4626baa925431adae7dd66ec
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 14 17:03:39 2014 -0500
+
+    Checks if measurement / prediction exists before returning array
+
+commit d1cbadf8d60a455b31e32acf2a796d3bdf3b0512
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 14 16:45:48 2014 -0500
+
+    Updated to-do list
+
+commit e71bc4a25a4d25dbc86fc60462b7b41a785c4b7a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 14 16:29:24 2014 -0500
+
+    Started making some unit tests for Magpie
+    
+    First test: Dataset object
+
+commit 253e7efc138f39228b761644cbcea882ae0c057d
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 14 16:23:26 2014 -0500
+
+    Removed duplicate setAttributeName operation
+
+commit 50f71a58411299fc92937b14d63cc0bc0ee1ae08
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 14 12:57:42 2014 -0500
+
+    Support for MultiObjectiveRegression models in evaluate command
+    
+    Now prints out a table with each measured property
+
+commit fcb47a8871789827b42a55ec3658d1e50befccbc
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 13 10:35:50 2014 -0500
+
+    Added ability to set target property without removing entries
+    
+    Necessary for evaluating multiple properties of yet-unmeasured entries.
+
+commit 9894d527c9127799d006257d0533ed56825aa37a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 13 10:19:24 2014 -0500
+
+    Fixed setNProperties
+
+commit 5d09ab5c07b7b9c3e27ce85283a5ef1c3e95f6b5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 10 13:12:39 2014 -0500
+
+    Made formatted table for evaluation command
+
+commit ff720b09603868941c7e18f8bda0c13948abd2a4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 10 13:00:45 2014 -0500
+
+    Made output prettier
+
+commit 3135fae7e80e873e86f9b1b48b671eeb339e251e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 10 12:15:36 2014 -0500
+
+    Added evaluate command
+    
+    Required a few minor changes to various objects.
+    
+    Also made an example for this. Still some work to be done to make it pretty.
+
+commit d9190f7586f59931659f530d28085663e7addbfd
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 9 13:15:38 2014 -0500
+
+    Added ability to add entry to Dataset by parsing a string
+    
+    Step towards creating a "predict properties of X" command
+
+commit a4fdb4b94009188f865cce18b7132b98556c192f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 7 12:00:14 2014 -0500
+
+    Automatically document save formats
+    
+    Required some changes and clarifying of Javadoc along with editting the Python documentation tool
+
+commit 60a8d40487f2ad1511cc95e753a04e8db439ab98
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jul 7 11:01:02 2014 -0500
+
+    Fixed HHIp calculation.
+    
+    Was taking HHIp of a compound to be the minimum HHIp of all elements in the compound. It should have been the value of the least-produced element, which is the maximum HHIp. Doh!
+
+commit 85c2c44135bdaffdbcd0c35197f5f5c7f4dbfcb8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jul 6 10:29:25 2014 -0500
+
+    Added a single class for elemental lookup data.
+    
+    Major effect: Make it easier to generate a CompositionEntry from an input string. Not sure why I had it any other way in the first place.
+
+commit 67e3698197918912098be880eb2357424288b037
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 3 14:01:02 2014 -0500
+
+    Added new gripe
+
+commit b220a3fb779a951142b9d1f0beb7f9a591ae1c3f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jul 3 13:46:45 2014 -0500
+
+    Fixed bug in parsing site info
+    
+    Did not correctly support omitting sites with other symmetrically-equivalent sites from attribute generation
+
+commit f1fccf3f8c0dfe9ef1363a3ba77e39ec9e34dea3
+Merge: cc3732d 92a002b
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 2 18:44:08 2014 -0500
+
+    Merge origin/master
+
+commit cc3732d28fb9ec06c7d392a05170e3d61c669246
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 2 18:43:34 2014 -0500
+
+    Made objective function normalizing more robust
+    
+    Used 1%/99% percentile rather than minimum/maximum
+
+commit 92a002bf302ec4d942bab276fa189520f70f2ff0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jul 2 18:29:01 2014 -0500
+
+    Made objective function normalizing more robust
+    
+    Used 1%/99% percentile rather than minimum/maximum
+
+commit d0b602b8b7dc4c9fb8970b37a6dad03602d7e64f
+Author: Logan <Logan@Logan-Laptop>
+Date:   Wed Jul 2 14:58:27 2014 -0500
+
+    Removed warning when setting attribute names.
+    
+    Added warning about where this can go wrong to Javadoc instead
+
+commit aae817f207f59c21672743064aded4ed6c08c9cc
+Author: Logan <Logan@Logan-Laptop>
+Date:   Wed Jul 2 14:57:48 2014 -0500
+
+    Made Attribute_IDs a private variable. Changed train_protected()
+    
+    Goal was to make implementing this class simpler. Also, made some improvements to documentation.
+
+commit 90650c2284cf158f49124500a4f5239d74bb4dd3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jul 1 16:25:05 2014 -0500
+
+    Cleaned up statistics output
+
+commit 230d33d8db4209738b583745bb82927b9eadcd72
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 30 16:09:58 2014 -0500
+
+    Made commands consistent with documentation
+
+commit 58124ce79b7d6030f6eeb1311846a824d5dafb14
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 30 16:05:37 2014 -0500
+
+    Cleaned documentation
+
+commit 8724fddfd81c979eff2a0b4520cc9c93961481a2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 30 15:46:04 2014 -0500
+
+    Added MultiPropertyRegression
+    
+    This class remove the need for a user to define a MultiObjectiveEntryRanker when creating a multi-property model
+
+commit 1661d2a6376fa455394fb29f910e962948b6336f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 30 15:43:47 2014 -0500
+
+    Better docs / error messages
+
+commit dcac6137c69295f8e819114d2d590accd80e9807
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 30 15:38:50 2014 -0500
+
+    Fixed usage doc
+
+commit a8ef32f69493a3d60d29d01b7e6d37cd272fb2af
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 30 09:20:49 2014 -0500
+
+    Added in URL to DMSP paper
+
+commit f39dae36397aedc5a5064e19b78a65628000909f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 30 09:18:44 2014 -0500
+
+    Detect whether "successes" have been found
+    
+    Also, some significant cleaning of the code.
+
+commit e4fbcbf6492a22260ae933faa5d97947ea21db71
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 30 01:15:35 2014 -0500
+
+    Edited documentation
+
+commit b722851f1a37b162ad48fc0f0b3193ccc3266e56
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 26 13:41:27 2014 -0500
+
+    Bug Fix: Was not cloning models during set operation
+    
+    All submodels had the small instance in some cases, which causes chaos
+
+commit 611e55ea9cc800d051eb0a90ce8e240ac7f118d0
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 26 13:34:00 2014 -0500
+
+    Updated statuses
+
+commit 3c092b36e7673f0f353dc37fcc99dcd5fa61a67e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 26 13:29:07 2014 -0500
+
+    Bug Fix: Was always using measured class
+
+commit e9a325e5d415c542908d22c02dfe13f04fc1b1ae
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 26 13:28:43 2014 -0500
+
+    Made entry ranker "use measured" and "is maximizing" boolean private
+
+commit 606d3da7ee3896fbfc01f31653c5e8f8b455a7a8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 26 13:24:41 2014 -0500
+
+    Made entry ranker "use measured" and "is maximizing" boolean protected
+
+commit bbb63a652109e0e8310e18e5e8f90bd5e3d38f82
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 26 13:15:45 2014 -0500
+
+    Documentation update
+
+commit 2f6ae5554c9ed62e296e5f8d722a5b353ae2f4c6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 25 17:45:01 2014 -0500
+
+    Added HHI Calculator
+
+commit 93d475b695b20bcb2af30be247696fedde37a313
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 25 17:44:45 2014 -0500
+
+    Can't (x == Double.NaN)
+
+commit 78eaac854b3b6ac45cd27178b41142a92856e6de
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Wed Jun 25 17:39:17 2014 -0500
+
+    Cleaned documentation
+
+commit 546c9926f5de2522053cfc962ab5d64fccdd940d
+Author: Logan <Logan@10.101.58.191>
+Date:   Tue Jun 24 09:25:51 2014 -0500
+
+    Added elmental HHI data
+
+commit dc6b1380653f12f72a5fcf9296702aba09d4cce3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 24 07:12:04 2014 -0500
+
+    Bug fix
+
+commit 77b7c6bd6f89022e20af90d7c4d9fb61620f3105
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 24 07:11:42 2014 -0500
+
+    Print in prop format
+
+commit 2da4b6e245233843f3f02e96a0fde642a8f5737e
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Tue Jun 24 06:21:59 2014 -0500
+
+    Not sure why build.xml got deleted.
+    
+    	new file:   simple-build.xml
+
+commit b72989d789f918e7492374b9e3bda6bc13231de9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 16:25:46 2014 -0500
+
+    Added "write generations" command
+
+commit 5208e67d3ed776532deb2e79ad2d9f4b61780bee
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 15:59:00 2014 -0500
+
+    Marked one off list
+
+commit 9a4e85900b6bca81074ae48ca35f0b22832c35b2
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 15:56:16 2014 -0500
+
+    Gave it a better name
+
+commit 33756c3d04e7a1a08c42e47ac158e81bed9b0918
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 15:55:54 2014 -0500
+
+    Gave it a better name
+
+commit 2ea8bbdfcbe4ba469e4db5ba6ba67aa7dbfcc763
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 15:55:15 2014 -0500
+
+    Gave it a better name
+
+commit b0a58b6c3fbf022a0646c07cc677733460e3d7f3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 15:42:51 2014 -0500
+
+    Made Exceptions more useful
+
+commit f9641ba2480c86c8bbc05bd4230c4ac398845cff
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 15:39:48 2014 -0500
+
+    Fixed setOptions and printUsage
+    	modified:   src/magpie/optimization/rankers/AdaptiveScalarizingEntryRanker.java
+
+commit a39f3a61b15341d5fcaabd5e5ae9912864016328
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 15:30:52 2014 -0500
+
+    Fixed clone
+
+commit 40f63733182a4a1ee11ebe451b0c4af7211a3b35
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 15:19:19 2014 -0500
+
+    Removed need for "template" on creation
+
+commit 3a0d5a14a546c79def7ad8158704eab10826df25
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 15:00:37 2014 -0500
+
+    Fixed autodoc
+
+commit d0f086d0887268ed64ad4e12b075ae2bb68c48e6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 14:36:44 2014 -0500
+
+    Added multi-objective optimization
+
+commit 281c9cf561f54b5428f1fce3b2a64f0d558ef97a
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 14:16:08 2014 -0500
+
+    Added ability to use measured / predicted
+
+commit fedfb8a00b605bfc4f10f4ee4a5a6044d295fe23
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 13:59:45 2014 -0500
+
+    Pedantry
+
+commit 17037ae7984a0db8a9b3881942de52420fa3bec9
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 13:44:37 2014 -0500
+
+    Added PropertyRangeFilter
+
+commit 699f9a83512e56286239a61435812195305d603f
+Author: Logan <Logan@Logan-Laptop>
+Date:   Mon Jun 23 10:42:36 2014 -0500
+
+    Updated to-do list
+
+commit 5fcb68bf4c64902bba22e45d8a5341e31f0a8f70
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 06:28:27 2014 -0500
+
+    Cleaned documentation
+
+commit d642933adc35e92156b0f208c4c71ee619d2e9a6
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 06:02:36 2014 -0500
+
+    Fixed clone
+
+commit 58bf3fbe789d1366e1e7bfcc6947e76a7e9633c8
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Mon Jun 23 06:02:13 2014 -0500
+
+    Success filter rather than obj. func. threshold
+    
+    This way, one can create arbitrary filters to evaluate multiple criteria
+
+commit 3e0b44c99fec6dfb92ca49c138f24ef02c66d8f3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sun Jun 22 18:07:51 2014 -0500
+
+    Added class filter
+    
+    Also, changed name of ClassVariableRangeFilter to be consistent
+
+commit fbe6a9052727e13bbedc8556a9755956c9638791
+Author: logan <logan@logan-ubuntu>
+Date:   Sun Jun 22 17:53:08 2014 -0500
+
+    Added a MultiFilter
+
+commit 566001a5683a03d011977626759c254f2681fecd
+Author: logan <logan@logan-ubuntu>
+Date:   Sun Jun 22 17:04:23 2014 -0500
+
+    Added new idea
+
+commit 47bcea01a24bc71a9911586a3abfd0e649817bba
+Author: logan <logan@logan-ubuntu>
+Date:   Sun Jun 22 17:04:03 2014 -0500
+
+    Handle multiobjective searches
+
+commit 551740ef340cdb1f0a23560d729bdb07fead8cd0
+Author: Logan <Logan@Logan-Laptop>
+Date:   Fri Jun 20 17:55:49 2014 -0500
+
+    Minor bug fix
+
+commit f7f2b3516a1fabe92ffae94d3f51515e9ad32603
+Author: Logan <Logan@Logan-Laptop>
+Date:   Fri Jun 20 17:55:12 2014 -0500
+
+    Edited examples
+
+commit a6003b55abff1267aaa690c4275ebbe009a9342f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Sat Jun 21 08:29:41 2014 -0500
+
+    Corrected bird video
+    
+    Video was of a Hooded Crow and not a Magpie. Can't have that!
+    	modified:   frontMatter.html
+
+commit 0b8bd17dce06ab7dc4613014794b583a2785041c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 15:23:17 2014 -0500
+
+    Marked multi-objective as in-progress
+
+commit 8cd9c94da5d9a71c0d5d33861385ccaa08a974ff
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 15:22:55 2014 -0500
+
+    Minor bug fixes
+
+commit d7773e3697262e5962e408749e4a1a86f72129e4
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 15:22:20 2014 -0500
+
+    Removed generic MultiPropertyModel
+    
+    Probably won't need a multi-objective classifier. Seemed a big pain anyway
+
+commit 368ab00ce801461de8f3b01506f83f5b249830ac
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 15:21:29 2014 -0500
+
+    Fixed ability to use something besides a property as class
+
+commit eaaad2d13afce09835f2ace669b928bdfc3a27de
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 15:20:42 2014 -0500
+
+    Made MultiPropertyModel a regression-only model
+
+commit 6b138e4b295f544bc585440d3c8a1ea516662f31
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 15:19:28 2014 -0500
+
+    Removed check for measured classes before training
+    
+    Don't worry: An error will still get thrown, just later in the execution.
+
+commit 5140208ff285e26f6158809d665c646ac11a5f73
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 15:13:41 2014 -0500
+
+    Added MultiObjective model example
+
+commit c5f55bf1f37163f626e9bd3eb2dfedc601e3fc9f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 14:01:24 2014 -0500
+
+commit bd47699ab1aecf747238ac71ab8e53a664102bcf
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 13:55:02 2014 -0500
+
+    Make MultiobjectiveEntryRanker clonable
+    
+    This is necessary since that can be trained. Training a clone should not affect its siblings(?)
+
+commit d5b0acf52fe1eb13da0838b861313fe8711a4825
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 13:48:50 2014 -0500
+
+    Changed to a superclass from interface
+
+commit 149fcca328d2ab9ce09cf49cd18fdef1d5da0b80
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 13:45:13 2014 -0500
+
+    Added MultiobjectiveRanker interface
+
+commit 02000e7cda2f2a9daf7a389cb25b2e66932b7d2c
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 13:13:44 2014 -0500
+
+    Implemented PropertyFormulaRanker
+
+commit 5f0bca6775ec74c1998e04667090660879b31658
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 13:08:12 2014 -0500
+
+    Updated expr library
+
+commit d49ce32be3f65afddb9dbe7ebf0f542c147c8fa9
+Author: Logan <Logan@Logan-Laptop>
+Date:   Fri Jun 20 10:40:55 2014 -0500
+
+    Created PropertyFormulaRanker
+
+commit 5b4dec6bbc24a3882e4a73a8dfb27ecfaba5b06f
+Author: Logan <Logan@Logan-Laptop>
+Date:   Fri Jun 20 10:32:20 2014 -0500
+
+    Created MultiPropertyModel
+
+commit eafe3bc2f31be5e12d83209df9980b757d86db25
+Author: Logan <Logan@Logan-Laptop>
+Date:   Fri Jun 20 10:21:22 2014 -0500
+
+    Added new idea
+
+commit 90f1f6c1c3b141254717279b57cee44d14ea7879
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Fri Jun 20 09:33:34 2014 -0500
+
+    Made CompositionDataset elemental property commands attribute commands
+
+commit 9c969d4362f44b285340ce3c787d604544989dc3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 19 16:09:08 2014 -0500
+
+    Added neural network example
+
+commit 0143bbf8aa1bbcbeee9db53995bf88cc6a5bb14f
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 19 15:57:32 2014 -0500
+
+    Made AttributeNames private
+    
+    Originally a change in Dataset, which had wide implications
+
+commit 76326f64e6c7d0342db4f422bffb946c72401cd5
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 19 15:54:52 2014 -0500
+
+    Made AttributeNames private
+    
+    Originally a change in Dataset, which had wide implications
+
+commit de1763f3b23c155f99b6502e2d4ed4cee3df4b73
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 19 15:52:24 2014 -0500
+
+    Added clone operation
+
+commit 70691f5af12e6cc5f6cb4b0df77a474e4bee1256
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 19 15:29:24 2014 -0500
+
+    Minor edits
+
+commit 614d70c066fba75e4ed15b6189d04198743cd0c3
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 12 15:53:00 2014 -0500
+
+    Fixed autodoc
+
+commit 24cea52ba018e099d93a49c8c0e8211b77f13f58
+Author: Logan Ward <ward.logan.t@gmail.com>
+Date:   Thu Jun 12 15:27:31 2014 -0500
+
+    Initial Commit
+    
+    I borked my previous git repo by adding the large datasets (i.e. all of OQMD). Not going to do it on this one!

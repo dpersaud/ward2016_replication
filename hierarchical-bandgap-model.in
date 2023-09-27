@@ -1,0 +1,60 @@
+// This script creates a hierarchical model design to predict the band gap energy of crystalline compounds.
+//   Run by executing this command from the same directory containing this script:
+//       java -jar magpie/dist/Magpie.jar hierarchical-bandgap-model.in
+//   The calculation takes approximately 6.5 minutes on a computer with a 3.5GHz processor and 4GB of RAM
+
+// Load in a dataset of compound properties
+data = new data.materials.CompositionDataset
+data import datasets/bandgap.data
+data filter exclude ContainsElementFilter He Ne Ar Kr Xe
+data attributes properties directory magpie/Lookup Data/
+data attributes properties add set general
+data attributes generate
+
+// Set the target property to be band gap energy
+data target bandgap
+
+// Define the structure of the composite model
+model = new models.regression.SplitRegression
+clfr = new models.classification.WekaClassifier meta.RandomSubSpace -W "weka.classifiers.trees.REPTree" -- -N 7
+model splitter PredictedClassIntervalSplitter $clfr 0 1.5 3
+
+// Define the submodel
+submodel = new models.regression.SplitRegression
+submodel splitter MultipleElementGroupsSplitter "F Cl Br I At" "O S Se Te Po" "N P As Sb Bi"
+leaf = new models.regression.WekaRegression meta.RandomSubSpace -W "weka.classifiers.trees.REPTree" -- -N 7
+submodel submodel set generic $leaf
+
+// Assemble model
+model submodel set 0 $leaf
+model submodel set generic $submodel
+
+// Test it using cross validation
+model train $data
+model crossvalidate $data 10
+
+// Print out performance statistics
+print model training stats
+print model validation stats
+
+// Split 10% of the data to use as a data
+testset = data split 0.1
+
+// Load and train the model
+model train $data
+model run $testset
+
+// Evaluate selection performance
+stats = new analytics.TargetRegressionStatistics 1.3 -accept 0.4 -window 1.0 -cands 30
+stats evaluate $testset
+
+// Print statistics regarding selection performance
+print stats stats 
+print stats roc
+print stats window 
+print stats rank
+
+// Print execution time
+timer elapsed
+
+exit
