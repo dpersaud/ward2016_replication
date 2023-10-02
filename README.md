@@ -10,3 +10,8 @@ Replication Steps
 		oqmd.data: OQMD v1.0 used to train the heirarchical model to make predictions
 	- hierarchical-bandgap-model.in (text interface input file to create propsed bandgap model)
 
+2. Modified hierarchical-bandgap-model.in to export base models and vary the random state
+   Note: random state needed to be changed on line 19 and 25
+	- made 10 different models with this input file for random seed sensitivity test
+		--> Run this using using ./makeModels.sh
+	- exports dataset template to ensure the same features get created for any other data used with these models

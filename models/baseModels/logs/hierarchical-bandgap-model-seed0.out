@@ -1,0 +1,159 @@
+data = new data.materials.CompositionDataset 
+data import datasets/bandgap.data 
+	Imported 25212 entries
+data filter exclude ContainsElementFilter He Ne Ar Kr Xe 
+	Filtered using a ContainsElementFilter. New size: 25186
+data attributes properties directory magpie/Lookup Data/ 
+data attributes properties add set general 
+	Added 22 new properties.
+data attributes generate 
+	Generated 145 attributes.
+data target bandgap 
+	Set target property to bandgap. 101 entries were removed.
+model = new models.regression.SplitRegression 
+clfr = new models.classification.WekaClassifier meta.RandomSubSpace -W weka.classifiers.trees.REPTree -S 0 -- -N 7 -S 0 
+model splitter PredictedClassIntervalSplitter $clfr 0 1.5 3 
+submodel = new models.regression.SplitRegression 
+submodel splitter MultipleElementGroupsSplitter "F Cl Br I At" "O S Se Te Po" "N P As Sb Bi" 
+leaf = new models.regression.WekaRegression meta.RandomSubSpace -W weka.classifiers.trees.REPTree -S 0 -- -N 7 -S 0 
+submodel submodel set generic $leaf 
+model submodel set 0 $leaf 
+model submodel set generic $submodel 
+model train $data 
+model crossvalidate $data 10 
+print model training stats 
+
+Variable: model - Command: training stats
+Number Tested: 25085
+Pearson's Correlation (R): 0.9669
+Spearman's Correlation (Rho): 0.8982
+Kendall's Correlation (Tau): 0.7978
+MAE: 2.1558e-01
+RMSE: 4.4349e-01
+MRE: NaN
+ROC AUC: 0.9770
+
+print model validation stats 
+
+Variable: model - Command: validation stats
+Number Tested: 25085
+Pearson's Correlation (R): 0.9181
+Spearman's Correlation (Rho): 0.8583
+Kendall's Correlation (Tau): 0.7242
+MAE: 3.3909e-01
+RMSE: 6.8919e-01
+MRE: NaN
+ROC AUC: 0.9442
+
+testset = data split 0.1 
+	Split off 2508 entries from dataset
+model train $data 
+model run $testset 
+stats = new analytics.TargetRegressionStatistics 1.3 -accept 0.4 -window 1.0 -cands 30 
+stats evaluate $testset 
+	Calculated statistics from 2508 entries
+print stats stats 
+
+Variable: stats
+Number Tested: 2508
+Pearson's Correlation (R): 0.8854
+Spearman's Correlation (Rho): 0.7091
+Kendall's Correlation (Tau): 0.5782
+MAE: 2.5540e-01
+RMSE: 4.7355e-01
+MRE: 0.7752
+ROC AUC: 0.7877
+
+print stats roc 
+
+Variable: stats
+      Value	        FPR	Sensitivity
+1.00000e-03	0.00000e+00	0.00000e+00
+3.41727e-01	1.68539e-02	2.98969e-01
+4.58031e-01	3.46821e-02	4.44015e-01
+5.72175e-01	5.23176e-02	5.31915e-01
+6.81012e-01	7.00847e-02	6.17801e-01
+7.77919e-01	8.24494e-02	7.14286e-01
+9.12707e-01	1.00595e-01	7.63265e-01
+1.04679e+00	1.14080e-01	8.02491e-01
+1.16735e+00	1.57007e-01	8.40984e-01
+1.18905e+00	1.76626e-01	8.60616e-01
+1.25178e+00	2.12154e-01	8.90823e-01
+1.27504e+00	2.53205e-01	9.19811e-01
+1.28403e+00	2.98555e-01	9.40532e-01
+1.28915e+00	3.45104e-01	9.45227e-01
+1.29204e+00	3.95610e-01	9.48438e-01
+1.29335e+00	4.45931e-01	9.50000e-01
+1.29415e+00	4.98929e-01	9.50000e-01
+1.29426e+00	5.61563e-01	9.50000e-01
+1.29430e+00	6.02248e-01	9.50000e-01
+1.29459e+00	7.83191e-01	9.50000e-01
+1.29459e+00	7.83191e-01	9.50000e-01
+1.29459e+00	7.83191e-01	9.50000e-01
+2.09453e+00	9.20245e-02	9.54629e-01
+2.33950e+00	1.85965e-01	9.69861e-01
+2.68122e+00	2.83262e-01	9.84176e-01
+3.52876e+00	2.95455e-01	9.94108e-01
+8.26400e+00	1.00000e+00	1.00000e+00
+
+
+print stats window 
+
+Variable: stats
+ Window Size	 # Inside Window	  Frac Below Tol
+ 5.00000e-02	               5	  8.00000000e-01
+ 1.00000e-01	               8	  7.50000000e-01
+ 1.50000e-01	              18	  8.88888889e-01
+ 2.00000e-01	              39	  7.17948718e-01
+ 2.50000e-01	              64	  7.18750000e-01
+ 3.00000e-01	              83	  6.98795181e-01
+ 3.50000e-01	             105	  6.76190476e-01
+ 4.00000e-01	             148	  6.35135135e-01
+ 4.50000e-01	             184	  5.92391304e-01
+ 5.00000e-01	             229	  5.10917031e-01
+ 5.50000e-01	             272	  4.66911765e-01
+ 6.00000e-01	             305	  4.45901639e-01
+ 6.50000e-01	             359	  4.09470752e-01
+ 7.00000e-01	             404	  3.91089109e-01
+ 7.50000e-01	             458	  3.73362445e-01
+ 8.00000e-01	             496	  3.52822581e-01
+ 8.50000e-01	             523	  3.44168260e-01
+ 9.00000e-01	             564	  3.22695035e-01
+ 9.50000e-01	             619	  3.08562197e-01
+ 1.00000e+00	             650	  2.98461538e-01
+
+
+print stats rank 
+
+Variable: stats
+Candidates	  Mean Error	 # Below Tol
+         2	 3.74500e-01	           1
+         3	 2.74667e-01	           2
+         5	 2.56200e-01	           4
+         6	 2.19667e-01	           5
+         8	 3.28000e-01	           6
+         9	 2.95333e-01	           7
+        11	 2.63455e-01	           9
+        12	 2.48667e-01	          10
+        14	 2.33500e-01	          12
+        15	 2.18000e-01	          13
+        17	 2.08235e-01	          15
+        18	 2.07444e-01	          16
+        20	 2.76250e-01	          16
+        21	 2.67905e-01	          17
+        23	 2.53696e-01	          19
+        24	 2.97292e-01	          19
+        26	 3.27192e-01	          20
+        27	 3.63222e-01	          20
+        29	 3.44483e-01	          22
+        30	 3.35400e-01	          23
+
+
+save model models/baseModels/bandgap_model_seed0 
+	Serialized model to models/baseModels/bandgap_model_seed0.obj
+template = data clone -empty 
+save template datasets/bandgap_dataTemplate 
+	Serialized template to datasets/bandgap_dataTemplate.obj
+timer elapsed 
+	Total time elapsed: 130.073 s
+exit 

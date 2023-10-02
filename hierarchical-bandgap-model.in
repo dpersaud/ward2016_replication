@@ -16,13 +16,13 @@ data target bandgap
 
 // Define the structure of the composite model
 model = new models.regression.SplitRegression
-clfr = new models.classification.WekaClassifier meta.RandomSubSpace -W "weka.classifiers.trees.REPTree" -- -N 7
+clfr = new models.classification.WekaClassifier meta.RandomSubSpace -W "weka.classifiers.trees.REPTree" -S RANDOMSEED_placeholder -- -N 7 -S RANDOMSEED_placeholder
 model splitter PredictedClassIntervalSplitter $clfr 0 1.5 3
 
 // Define the submodel
 submodel = new models.regression.SplitRegression
 submodel splitter MultipleElementGroupsSplitter "F Cl Br I At" "O S Se Te Po" "N P As Sb Bi"
-leaf = new models.regression.WekaRegression meta.RandomSubSpace -W "weka.classifiers.trees.REPTree" -- -N 7
+leaf = new models.regression.WekaRegression meta.RandomSubSpace -W "weka.classifiers.trees.REPTree" -S RANDOMSEED_placeholder -- -N 7 -S RANDOMSEED_placeholder
 submodel submodel set generic $leaf
 
 // Assemble model
@@ -53,6 +53,15 @@ print stats stats
 print stats roc
 print stats window 
 print stats rank
+
+// Save model and data used to compute attributes for 
+//  later use. Once saved, you can load in the model
+//  and dataset using the "load" command. Example:
+//    model = load gfa.obj
+save model models/baseModels/bandgap_model_seedRANDOMSEED_placeholder
+// Save a template of computed attributes (descriptors)
+template = data clone -empty
+save template datasets/bandgap_dataTemplate
 
 // Print execution time
 timer elapsed
