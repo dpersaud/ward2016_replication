@@ -23,3 +23,6 @@ Replication Steps
 4. Created make-predictions.in to import the trained model and use it to make prediction using the test set
 	- ran this script 10 times for each of the models with the varrying random seeds for the sensitivity test
 		--> run this using ./makePredictions.sh
+
+5. Created plotPredictions.py to plot the results of the random seed sensitivity test
+		--> run this using python3 plotPredictions.py
