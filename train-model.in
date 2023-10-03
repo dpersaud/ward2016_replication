@@ -1,0 +1,28 @@
+// This script trains the hierarchical model design with OQMD v1
+//   Run by executing this command from the same directory containing this script:
+//       java -jar magpie/dist/Magpie.jar train-model.in
+
+// Start timer
+timer start
+
+// Load the model
+model = load models/baseModels/bandgap_model_seedRANDOMSEED_placeholder.obj
+
+
+// Load the training data
+trainData = load datasets/bandgap_dataTemplate.obj
+trainData import  datasets/oqmd_all.data
+trainData filter exclude ContainsElementFilter He Ne Ar Kr Xe
+trainData attributes generate
+
+trainData target bandgap
+
+// Train the model
+model train $trainData
+// Save the model
+save model models/trainedModels/bandgap_model_seedRANDOMSEED_placeholder_trained
+
+// Print out run time
+timer elapsed
+
+exit

@@ -1,0 +1,18 @@
+timer start 
+	Zeroed default timer
+model = load models/baseModels/bandgap_model_seed152.obj 
+trainData = load datasets/bandgap_dataTemplate.obj 
+trainData import datasets/oqmd_all.data 
+	Imported 228676 entries
+trainData filter exclude ContainsElementFilter He Ne Ar Kr Xe 
+	Filtered using a ContainsElementFilter. New size: 228649
+trainData attributes generate 
+	Generated 145 attributes.
+trainData target bandgap 
+	Set target property to bandgap. 99 entries were removed.
+model train $trainData 
+save model models/trainedModels/bandgap_model_seed152_trained 
+	Serialized model to models/trainedModels/bandgap_model_seed152_trained.obj
+timer elapsed 
+	Total time elapsed: 349.911 s
+exit 

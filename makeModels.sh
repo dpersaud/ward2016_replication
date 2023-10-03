@@ -17,6 +17,9 @@ for intRandomSeed_temp in "${lstRandomSeed[@]}"; do
 
   # Remove the temporary input script
   rm "hierarchical-bandgap-model-$intRandomSeed_temp.in"
+
+  # Print a message to the screen
+  echo "Finished creating model with random seed $intRandomSeed_temp"
 done
 
 # Remove the temporary template file
