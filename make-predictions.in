@@ -1,0 +1,26 @@
+// This script imports the trained model and predicts the bandgap of the test data
+//   Run by executing this command from the same directory containing this script:
+//       java -jar magpie/dist/Magpie.jar make-predictions.in
+
+// Start timer
+timer start
+
+// Load the model
+model = load models/trainedModels/bandgap_model_seedRANDOMSEED_placeholder_trained.obj
+
+// Load the testData
+testData = load datasets/bandgap_dataTemplate.obj
+testData import datasets/test_set.data
+
+testData modify AddPropertyModifier bandgap
+testData target bandgap -keep
+testData attributes generate
+
+model run $testData
+
+save testData predictions/testData_predictions_seedRANDOMSEED_placeholder prop
+
+// Print out run time
+timer elapsed
+
+exit

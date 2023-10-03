@@ -1,0 +1,18 @@
+timer start 
+	Zeroed default timer
+model = load models/trainedModels/bandgap_model_seed8653_trained.obj 
+testData = load datasets/bandgap_dataTemplate.obj 
+testData import datasets/test_set.data 
+	Imported 5 entries
+testData modify AddPropertyModifier bandgap 
+	Modified dataset using a AddPropertyModifier
+testData target bandgap -keep 
+	Set target property to bandgap
+testData attributes generate 
+	Generated 145 attributes.
+model run $testData 
+save testData predictions/testData_predictions_seed8653 prop 
+	Saved testData to disk in prop format to predictions/testData_predictions_seed8653.prop
+timer elapsed 
+	Total time elapsed: 1.307 s
+exit 

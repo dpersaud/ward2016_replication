@@ -19,3 +19,7 @@ Replication Steps
 3. Created train-model.in to import a base model and and retrain with the perscribed training set (OQMD v1)
 	- ran this script 10 times for each of the models with the varrying random seeds for the sensitivity test
 		--> run this using ./trainModels.sh
+
+4. Created make-predictions.in to import the trained model and use it to make prediction using the test set
+	- ran this script 10 times for each of the models with the varrying random seeds for the sensitivity test
+		--> run this using ./makePredictions.sh
