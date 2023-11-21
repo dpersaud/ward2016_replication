@@ -14,5 +14,5 @@ model train $trainData
 save model models/trainedModels/bandgap_model_seed1_trained 
 	Serialized model to models/trainedModels/bandgap_model_seed1_trained.obj
 timer elapsed 
-	Total time elapsed: 314.910 s
+	Total time elapsed: 320.398 s
 exit 

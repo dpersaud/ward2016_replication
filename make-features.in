@@ -1,0 +1,41 @@
+// This script uses magepie to generate descriptors for the training and test set
+//   Run by executing this command from the same directory containing this script:
+//       java -jar magpie/dist/Magpie.jar make-features.in
+
+// Start timer
+timer start
+
+// Load the ICSD entries in OQMD for validation
+icsdData = load datasets/bandgap_dataTemplate.obj
+icsdData import datasets/bandgap.data
+icsdData filter exclude ContainsElementFilter He Ne Ar Kr Xe
+icsdData attributes generate
+
+icsdData target bandgap -keep
+
+save icsdData datasets/bandgap_features csv
+
+// Load the training data
+trainData = load datasets/bandgap_dataTemplate.obj
+trainData import  datasets/oqmd_all.data
+trainData filter exclude ContainsElementFilter He Ne Ar Kr Xe
+trainData attributes generate
+
+trainData target bandgap -keep
+
+save trainData datasets/oqmd_all_features csv
+
+// Load the test data
+testData = load datasets/bandgap_dataTemplate.obj
+testData import datasets/test_set.data
+testData modify AddPropertyModifier bandgap
+testData attributes generate
+
+testData target bandgap -keep
+
+save testData datasets/test_set_features csv
+
+// Print out run time
+timer elapsed
+
+exit

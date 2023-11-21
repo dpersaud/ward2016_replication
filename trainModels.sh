@@ -1,4 +1,11 @@
 #!/bin/bash
+# Run this file using:
+#       ./trainModels.sh
+# Ensure version 1.8 of java is running
+# Check version using:
+#       java -version
+# If you have version 1.8 installed, run the following on mac or linux to activate version 1.8:
+#       export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Define a list of random seeds
 lstRandomSeed=(0 1 15 42 58 66 73 152 982 8653)

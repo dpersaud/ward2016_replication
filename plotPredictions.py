@@ -47,11 +47,11 @@ for i in lstRandomSeeds:
     dfTest.rename(columns={'bandgap_predicted' : 'repPredictions_seed' + str(i)}, inplace=True)
 
 # find the mean of the repPredictions for each composition
-dfTest['repPredictions_mean'] = dfTest.iloc[:, 2:].mean(axis=1)
+dfTest['repPredictions_mean'] = dfTest.iloc[:, 2:12].mean(axis=1)
 # find the min of the repPredictions for each composition
-dfTest['repPredictions_min'] = dfTest.iloc[:, 2:].min(axis=1)
+dfTest['repPredictions_min'] = dfTest.iloc[:, 2:12].min(axis=1)
 # find the max of the repPredictions for each composition
-dfTest['repPredictions_max'] = dfTest.iloc[:, 2:].max(axis=1)
+dfTest['repPredictions_max'] = dfTest.iloc[:, 2:12].max(axis=1)
 
 # find the difference between the mean of the repPredictions and the orgPredictions (absolute value)
 dfTest['repPredictions_mean_diff'] = abs(dfTest['repPredictions_mean'] - dfTest['orgPredictions'])
@@ -63,11 +63,11 @@ dfTest.to_csv('predictions/testData_predictions.csv', index=False)
 #%%
 # PLOT PREDICTIONS-----------------------------------------------------------------------------------------------------
 
-lstScHg4Cl7_repPredictions = dfTest[:1].values.tolist()[0][2:]
-lstV2Hg3Cl7_repPredictions = dfTest[1:2].values.tolist()[0][2:]
-lstMn6CCl8_repPredictions = dfTest[2:3].values.tolist()[0][2:]
-lstHf4S11Cl2_repPredictions = dfTest[3:4].values.tolist()[0][2:]
-lstVCu5Cl9_repPredictions = dfTest[4:5].values.tolist()[0][2:]
+lstScHg4Cl7_repPredictions = dfTest[:1].values.tolist()[0][2:12]
+lstV2Hg3Cl7_repPredictions = dfTest[1:2].values.tolist()[0][2:12]
+lstMn6CCl8_repPredictions = dfTest[2:3].values.tolist()[0][2:12]
+lstHf4S11Cl2_repPredictions = dfTest[3:4].values.tolist()[0][2:12]
+lstVCu5Cl9_repPredictions = dfTest[4:5].values.tolist()[0][2:12]
 
 lstViolinData = [lstScHg4Cl7_repPredictions,
                  lstV2Hg3Cl7_repPredictions,
@@ -76,10 +76,10 @@ lstViolinData = [lstScHg4Cl7_repPredictions,
                  lstVCu5Cl9_repPredictions]
 
 # initialize a subplot with 1 row and 1 column
-fig, ax = plt.subplots(1, 1, figsize=(6, 4), facecolor='w', edgecolor='k', dpi = 300, tight_layout=True)
+fig, ax = plt.subplots(1, 1, figsize=(6, 4), facecolor='w', edgecolor='k', dpi = 800, constrained_layout=True)
 
 # plot the repPredictions
-pltVP = ax.violinplot(lstViolinData, showextrema=True, showmedians=True,)
+pltVP = ax.violinplot(lstViolinData, showextrema=True, showmedians=True)
 # add violin plot labels
 pltVP['bodies'][0].set_label('random seed sensitivity')
 # adjust transparency of the violins and the median lines
@@ -106,7 +106,7 @@ ax.set_xlabel('Composition', fontdict={'fontsize': 14, 'fontweight': 'medium'})
 ax.set_ylabel('Bandgap (eV)', fontdict={'fontsize': 14, 'fontweight': 'medium'})
 
 # set the title
-ax.set_title('Predictions for the test dataset', fontdict={'fontsize': 20, 'fontweight': 'medium'})
+ax.set_title('Test Set Predictions - Original Hierarchical Model', fontdict={'fontsize': 20, 'fontweight': 'medium'})
 
 # reorder the legend entries
 handles, labels = ax.get_legend_handles_labels()

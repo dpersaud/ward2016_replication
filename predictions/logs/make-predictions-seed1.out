@@ -14,5 +14,5 @@ model run $testData
 save testData predictions/testData_predictions_seed1 prop 
 	Saved testData to disk in prop format to predictions/testData_predictions_seed1.prop
 timer elapsed 
-	Total time elapsed: 1.285 s
+	Total time elapsed: 1.291 s
 exit 
