@@ -104,6 +104,8 @@ ax.set_xlabel('Composition', fontdict={'fontsize': 14, 'fontweight': 'medium'})
 
 # set the y-axis label
 ax.set_ylabel('Bandgap (eV)', fontdict={'fontsize': 14, 'fontweight': 'medium'})
+# set the y-axis limits from 0 to 2.5 in increments of 0.5
+ax.set_ylim(0, 2.5, 0.5)
 
 # set the title
 ax.set_title('Test Set Predictions - Original Hierarchical Model', fontdict={'fontsize': 20, 'fontweight': 'medium'})
@@ -116,5 +118,14 @@ labels = [labels[1], labels[2], labels[0]]
 ax.legend(handles, labels, )
 
 # save the figure
-fig.savefig('predictions/testData_predictions.png', dpi=300, bbox_inches='tight')
+fig.savefig('plots/replication/testData_replicatedPredictions.png', dpi=800, bbox_inches='tight')
+# save the figure as a .tiff file
+fig.savefig('plots/replication/testData_replicatedPredictions.tif', dpi=600, bbox_inches='tight')
+
+# set the dimensions of the figure to 8cm x 4cm
+fig.set_size_inches(8, 4)
+# save the figure
+fig.savefig('plots/replication/testData_replicatedPredictions_tc.png', dpi=800, bbox_inches='tight')
+fig.savefig('plots/replication/testData_replicatedPredictions_tc.tif', dpi=600, bbox_inches='tight')
+
 # %%

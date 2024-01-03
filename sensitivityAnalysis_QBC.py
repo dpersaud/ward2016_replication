@@ -81,7 +81,7 @@ print('Standard Deviation of RMSE: ', xgbReg_10cv.std())
 # PULL THE SAME STATISTICS FROM THE THE ORIGINAL MODEL-----------------------------------------------------------------
 
 # pull the validation RMSE from the model with random seed 0
-with open('./models/baseModels/logs/hierarchical-bandgap-model-seed0.out' + strFile_temp, 'r') as f:
+with open('./models/baseModels/logs/hierarchical-bandgap-model-seed0.out', 'r') as f:
     # read the file
     lstLines_temp = f.readlines()
     # get the line with the results
@@ -136,72 +136,82 @@ lstSeeds = np.random.randint(0, 1000, 10)
 #%%
 # PSUEDO-RANDOM SEED SENSITIVITY ANALYSIS ON RANDOM FOREST REGRESSOR---------------------------------------------------
 
-# for each seed, initialize a random forest regressor, train the model and make predictions on the test set
-lstRfRegPredictions = []
-for intSeed_temp in lstSeeds:
-    # initialize the random forest regressor
-    rfReg_temp = make_pipeline(StandardScaler(), RandomForestRegressor(random_state=intSeed_temp, n_jobs=-1))
-    # fit the model to the training data
-    rfReg_temp.fit(dfTrain_x, srTrain_y)
-    # make predictions on the test set
-    lstRfRegPredictions.append(rfReg_temp.predict(dfTest_x))
+# # for each seed, initialize a random forest regressor, train the model and make predictions on the test set
+# lstRfRegPredictions = []
+# for intSeed_temp in lstSeeds:
+#     # initialize the random forest regressor
+#     rfReg_temp = make_pipeline(StandardScaler(), RandomForestRegressor(random_state=intSeed_temp, n_jobs=-1))
+#     # fit the model to the training data
+#     rfReg_temp.fit(dfTrain_x, srTrain_y)
+#     # make predictions on the test set
+#     lstRfRegPredictions.append(rfReg_temp.predict(dfTest_x))
+
+# # initialize a dataframe to store the predictions
+# dfTest_rfRegPredictions = pd.DataFrame(lstRfRegPredictions).T
+# # rename the columns to be the seed used
+# dfTest_rfRegPredictions.columns = lstSeeds
+# # add the composition to the dataframe
+# dfTest_rfRegPredictions['Composition'] = ['ScHg4Cl7','V2Hg3Cl7','Mn6CCl8','Hf4S11Cl2','VCu5Cl9']
+# # add the target to the dataframe
+# dfTest_rfRegPredictions['Class'] = dfTest['Class']
+# # add the mean of the predictions to the dataframe
+# dfTest_rfRegPredictions['Mean'] = dfTest_rfRegPredictions.iloc[:, :10].mean(axis=1)
+# # add the standard deviation of the predictions to the dataframe
+# dfTest_rfRegPredictions['Std'] = dfTest_rfRegPredictions.iloc[:, :10].std(axis=1)
+# # add the min of the predictions to the dataframe
+# dfTest_rfRegPredictions['Min'] = dfTest_rfRegPredictions.iloc[:, :10].min(axis=1)
+# # add the max of the predictions to the dataframe
+# dfTest_rfRegPredictions['Max'] = dfTest_rfRegPredictions.iloc[:, :10].max(axis=1)
+# # add the difference between the max and min of the predictions to the dataframe
+# dfTest_rfRegPredictions['Max-Min'] = dfTest_rfRegPredictions['Max'] - dfTest_rfRegPredictions['Min']
+# # save the predictions to a csv file
+# dfTest_rfRegPredictions.to_csv('predictions/sensitivityAnalysis/testData_predictions_rfReg.csv', index=False)
+
+'''
+This takes a long time to run so I just pull the data in from the csv file - if you want to run it, create the 
+features using the make-features.in script and uncomment the code
+'''
+dfTest_rfRegPredictions = pd.read_csv('predictions/sensitivityAnalysis/testData_predictions_rfReg.csv', header=0)
 
 #%%
 # PSUEDO-RANDOM SEED SENSITIVITY ANALYSIS ON XGBOOST REGRESSOR----------------------------------------------------------
 
-# for each seed, initialize a xgboost regressor, train the model and make predictions on the test set
-lstXgbRegPredictions = []
-for intSeed_temp in lstSeeds:
-    # initialize the xgboost regressor
-    xgbReg_temp = make_pipeline(StandardScaler(), xgb.XGBRegressor(random_state=intSeed_temp, n_jobs=-1))
-    # fit the model to the training data
-    xgbReg_temp.fit(dfTrain_x, srTrain_y)
-    # make predictions on the test set
-    lstXgbRegPredictions.append(xgbReg_temp.predict(dfTest_x))
+# # for each seed, initialize a xgboost regressor, train the model and make predictions on the test set
+# lstXgbRegPredictions = []
+# for intSeed_temp in lstSeeds:
+#     # initialize the xgboost regressor
+#     xgbReg_temp = make_pipeline(StandardScaler(), xgb.XGBRegressor(random_state=intSeed_temp, n_jobs=-1))
+#     # fit the model to the training data
+#     xgbReg_temp.fit(dfTrain_x, srTrain_y)
+#     # make predictions on the test set
+#     lstXgbRegPredictions.append(xgbReg_temp.predict(dfTest_x))
 
-#%%
+# # initialize a dataframe to store the predictions
+# dfTest_xgbRegPredictions = pd.DataFrame(lstXgbRegPredictions).T
+# # rename the columns to be the seed used
+# dfTest_xgbRegPredictions.columns = lstSeeds
+# # add the composition to the dataframe
+# dfTest_xgbRegPredictions['Composition'] = ['ScHg4Cl7','V2Hg3Cl7','Mn6CCl8','Hf4S11Cl2','VCu5Cl9']
+# # add the target to the dataframe
+# dfTest_xgbRegPredictions['Class'] = dfTest['Class']
+# # add the mean of the predictions to the dataframe
+# dfTest_xgbRegPredictions['Mean'] = dfTest_xgbRegPredictions.iloc[:, :10].mean(axis=1)
+# # add the standard deviation of the predictions to the dataframe
+# dfTest_xgbRegPredictions['Std'] = dfTest_xgbRegPredictions.iloc[:, :10].std(axis=1)
+# # add the min of the predictions to the dataframe
+# dfTest_xgbRegPredictions['Min'] = dfTest_xgbRegPredictions.iloc[:, :10].min(axis=1)
+# # add the max of the predictions to the dataframe
+# dfTest_xgbRegPredictions['Max'] = dfTest_xgbRegPredictions.iloc[:, :10].max(axis=1)
+# # add the difference between the max and min of the predictions to the dataframe
+# dfTest_xgbRegPredictions['Max-Min'] = dfTest_xgbRegPredictions['Max'] - dfTest_xgbRegPredictions['Min']
+# # save the predictions to a csv file
+# dfTest_xgbRegPredictions.to_csv('predictions/sensitivityAnalysis/testData_predictions_xgbReg.csv', index=False)
 
-# initialize a dataframe to store the predictions
-dfTest_rfRegPredictions = pd.DataFrame(lstRfRegPredictions).T
-# rename the columns to be the seed used
-dfTest_rfRegPredictions.columns = lstSeeds
-# add the composition to the dataframe
-dfTest_rfRegPredictions['Composition'] = ['ScHg4Cl7','V2Hg3Cl7','Mn6CCl8','Hf4S11Cl2','VCu5Cl9']
-# add the target to the dataframe
-dfTest_rfRegPredictions['Class'] = dfTest['Class']
-# add the mean of the predictions to the dataframe
-dfTest_rfRegPredictions['Mean'] = dfTest_rfRegPredictions.iloc[:, :10].mean(axis=1)
-# add the standard deviation of the predictions to the dataframe
-dfTest_rfRegPredictions['Std'] = dfTest_rfRegPredictions.iloc[:, :10].std(axis=1)
-# add the min of the predictions to the dataframe
-dfTest_rfRegPredictions['Min'] = dfTest_rfRegPredictions.iloc[:, :10].min(axis=1)
-# add the max of the predictions to the dataframe
-dfTest_rfRegPredictions['Max'] = dfTest_rfRegPredictions.iloc[:, :10].max(axis=1)
-# add the difference between the max and min of the predictions to the dataframe
-dfTest_rfRegPredictions['Max-Min'] = dfTest_rfRegPredictions['Max'] - dfTest_rfRegPredictions['Min']
-# save the predictions to a csv file
-dfTest_rfRegPredictions.to_csv('predictions/sensitivityAnalysis/testData_predictions_rfReg.csv', index=False)
-
-# initialize a dataframe to store the predictions
-dfTest_xgbRegPredictions = pd.DataFrame(lstXgbRegPredictions).T
-# rename the columns to be the seed used
-dfTest_xgbRegPredictions.columns = lstSeeds
-# add the composition to the dataframe
-dfTest_xgbRegPredictions['Composition'] = ['ScHg4Cl7','V2Hg3Cl7','Mn6CCl8','Hf4S11Cl2','VCu5Cl9']
-# add the target to the dataframe
-dfTest_xgbRegPredictions['Class'] = dfTest['Class']
-# add the mean of the predictions to the dataframe
-dfTest_xgbRegPredictions['Mean'] = dfTest_xgbRegPredictions.iloc[:, :10].mean(axis=1)
-# add the standard deviation of the predictions to the dataframe
-dfTest_xgbRegPredictions['Std'] = dfTest_xgbRegPredictions.iloc[:, :10].std(axis=1)
-# add the min of the predictions to the dataframe
-dfTest_xgbRegPredictions['Min'] = dfTest_xgbRegPredictions.iloc[:, :10].min(axis=1)
-# add the max of the predictions to the dataframe
-dfTest_xgbRegPredictions['Max'] = dfTest_xgbRegPredictions.iloc[:, :10].max(axis=1)
-# add the difference between the max and min of the predictions to the dataframe
-dfTest_xgbRegPredictions['Max-Min'] = dfTest_xgbRegPredictions['Max'] - dfTest_xgbRegPredictions['Min']
-# save the predictions to a csv file
-dfTest_xgbRegPredictions.to_csv('predictions/sensitivityAnalysis/testData_predictions_xgbReg.csv', index=False)
+'''
+This takes a long time to run so I just pull the data in from the csv file - if you want to run it, create the 
+features using the make-features.in script and uncomment the code
+'''
+dfTest_xgbRegPredictions = pd.read_csv('predictions/sensitivityAnalysis/testData_predictions_xgbReg.csv', header=0)
 
 
 #%%
@@ -300,6 +310,8 @@ ax.set_xlabel('Composition', fontdict={'fontsize': 14, 'fontweight': 'medium'})
 
 # set the y-axis label
 ax.set_ylabel('Bandgap (eV)', fontdict={'fontsize': 14, 'fontweight': 'medium'})
+# set the y-axis limits from 0 to 2 in increments of 0.5
+ax.set_yticks(np.arange(0, 2.5, 0.5))
 
 # set the title
 ax.set_title('Test Set Predictions - Modern Models', fontdict={'fontsize': 20, 'fontweight': 'medium'})
@@ -309,4 +321,11 @@ handles = [handles[1], handles[2], handles[0]]
 labels = [labels[1], labels[2], labels[0]]
 # add the legend
 ax.legend(handles, labels, )
+
+# save the figure
+plt.savefig('plots/sensitivityAnalysis/testData_modernModelPredictions.png', dpi=800, bbox_inches='tight')
+# save the figure as a .tiff    
+plt.savefig('plots/sensitivityAnalysis/testData_modernModelPredictions.tif', dpi=600, bbox_inches='tight')
+
+
 # %%
