@@ -174,4 +174,6 @@ ax.legend(handles, labels, )
 fig.set_size_inches(8, 4)
 # save the figure
 fig.savefig('plots/replication/testData_replicatedPredictions_tc.png', dpi=800, bbox_inches='tight')
-fig.savefig('plots/replication/testData_replicatedPredictions_tc.tif', dpi=600, bbox_inches='tight')
+fig.savefig('plots/replication/testData_replicatedPredictions_tc.tif', dpi=500, bbox_inches='tight')
+
+# %%
