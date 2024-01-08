@@ -122,10 +122,56 @@ fig.savefig('plots/replication/testData_replicatedPredictions.png', dpi=800, bbo
 # save the figure as a .tiff file
 fig.savefig('plots/replication/testData_replicatedPredictions.tif', dpi=600, bbox_inches='tight')
 
+#%%
+# PLOT PREDICTIONS FOR TABLE OF CONTENTS-------------------------------------------------------------------------------
+
+# initialize a subplot with 1 row and 1 column
+fig, ax = plt.subplots(1, 1, figsize=(2, 1), facecolor='w', edgecolor='k', dpi = 800, constrained_layout=True)
+
+# plot the repPredictions
+pltVP = ax.violinplot(lstViolinData, showextrema=True, showmedians=True)
+# add violin plot labels
+pltVP['bodies'][0].set_label('Replicated predictions (varied random seed)')
+# adjust transparency of the violins and the median lines
+for body in pltVP['bodies']:
+    body.set_alpha(0.2)
+    body.set_edgecolor('black')
+pltVP['cbars'].set_alpha(0.5)
+pltVP['cmaxes'].set_alpha(0.5)
+pltVP['cmins'].set_alpha(0.5)
+pltVP['cmedians'].set_alpha(0.5)
+# plot the orgPredictions with red x's
+ax.scatter(np.arange(1, 6, 1), dfTest['orgPredictions'], marker='x', color='tab:red', label ='Original predictions')
+
+
+# set the xticks
+ax.set_xticks(np.arange(1, 6, 1))
+# set the xticklabels
+ax.set_xticklabels(lstCompositionsFormated, fontdict={'fontsize': 16, 'fontweight': 'bold'})
+# set the x-axis label
+ax.set_xlabel('Test Set Compositions', fontdict={'fontsize': 20, 'fontweight': 'bold'})
+
+# set the yticks
+ax.set_yticks(np.arange(0, 3.0, 0.5))
+# set the yticklabels
+ax.set_yticklabels(['0', '0.5', '1.0', '1.5', '2.0', '2.5'], fontdict={'fontsize': 16, 'fontweight': 'bold'})
+# set the y-axis label
+ax.set_ylabel('Bandgap (eV)', fontdict={'fontsize': 20, 'fontweight': 'bold'})
+# set the y-axis limits from 0 to 2.5 in increments of 0.5
+ax.set_ylim(0, 2.5, 0.5)
+
+# set the title
+ax.set_title('Replicated Predictions', fontdict={'fontsize': 24, 'fontweight': 'bold'})
+
+# reorder the legend entries
+handles, labels = ax.get_legend_handles_labels()
+# handles = [handles[1], handles[2], handles[0]]
+# labels = [labels[1], labels[2], labels[0]]
+# add the legend
+ax.legend(handles, labels, )
+
 # set the dimensions of the figure to 8cm x 4cm
 fig.set_size_inches(8, 4)
 # save the figure
 fig.savefig('plots/replication/testData_replicatedPredictions_tc.png', dpi=800, bbox_inches='tight')
 fig.savefig('plots/replication/testData_replicatedPredictions_tc.tif', dpi=600, bbox_inches='tight')
-
-# %%
